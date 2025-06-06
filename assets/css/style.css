@@ -1,0 +1,903 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: unset !important; /* Disable default smooth scrolling in Bootstrap */
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar Start */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 2rem 0.8rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+.nav-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.nav-left .logo img{
+    width: 80px;
+}
+.nav-left .line{
+   width: 1.5px;
+   height: 45px;
+   background-color: #d23737;
+}
+.nav-left .group-logo img{
+    width: 80px;
+}
+.nav-left button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: calc(0.9rem + 0.5vw);
+    color: #525252;
+    margin-left: 0.5rem;
+}
+.nav-left button img{
+    width: 30px;
+    margin-right: 5px;
+}
+.nav-right{
+    width: 50%;
+}
+.nav-right .social-icons{
+    background-color: #366d96;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    padding: 0.4rem 1.2rem 0.6rem 1.7rem;
+    border-bottom-left-radius: 35px;
+}
+.nav-right .social-icons img{
+    width: 22px;
+}
+.nav-right button{
+    position: absolute;
+    bottom: 0.6rem;
+    right: 1.6%;
+    border: none;
+    background-color: #376d95;
+    color: #fff;
+    font-weight: 550;
+    font-size: calc(0.5rem + 0.5vw);
+    padding: 0.2rem 0.7rem;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+}
+.nav-right button:hover{
+    background-color: #214e70;
+}
+.nav-menu{
+    width: 75%;
+    background-color: rgba(217, 217, 217, 0.93);
+    border-radius: 1.2rem;
+    padding: 3rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 12.5%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s ease;;
+}
+.nav-menu.active{
+    top: 80%;
+    opacity: 1;
+    visibility: visible;
+}
+.nav-menu .menu{
+    width: 18%;
+    margin-bottom: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-menu .menu img{
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+.nav-menu .menu span{
+    color: #292929;
+    margin-top: 0.6rem;
+    font-weight: 550;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+@media screen and (max-width: 1229px){
+    .nav-menu{
+        padding: 2.5rem 2rem 1rem 2rem;
+    }
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    nav{
+        padding: 0.5rem 2rem 0.58rem 2rem;
+    }
+    .nav-menu{
+        width: 70%;
+        padding: 2.7rem 2rem 0.7rem 2rem;
+        left: 15%;
+    }
+    .nav-right .social-icons{
+        width: 20%;
+    }
+    .nav-right .social-icons img{
+        width: 23px;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    nav{
+        padding: 0.5rem 2rem 0.58rem 2rem;
+    }
+    .nav-left .logo img{
+        width: 88px;
+    }
+    .nav-right .social-icons{
+        width: 18%;
+    }
+    .nav-right .social-icons img{
+        width: 24px;
+    }
+    .nav-menu{
+        width: 70%;
+        padding: 2.7rem 2rem 1rem 2rem;
+        left: 15%;
+    }
+    .nav-menu .menu img{
+        width: 29px;
+        height: 29px;
+    }
+    .nav-menu .menu span{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+}
+/* Navbar End */
+
+/* Banner Start */
+.banner{
+    overflow: hidden;
+}
+.banner video{
+    width: 100%;
+    /* height: 88vh;
+    object-fit: cover; */
+}
+/* Banner End */
+
+/* Banner Pop-up Start */
+.banner-pop-up{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 30%;
+    z-index: 100;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 1s ease;
+}
+.banner-pop-up.hide{
+    right: -100%;
+}
+.banner-pop-up .img-box{
+    position: relative;
+}
+.banner-pop-up img{
+    width: 100%;
+    border-radius: 12px;
+}
+.banner-pop-up i{
+    position: absolute;
+    top: -1.9rem;
+    right: 0.5rem;
+    z-index: 20;
+    color: #fff;
+    font-size: calc(0.9rem + 0.5vw);
+    background-color: rgba(0, 0, 0, 0.495);
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.banner-pop-up i:hover{
+    background-color: rgba(0, 0, 0, 0.805);
+}
+/* Banner Pop-up End */
+
+/* About Start */
+.about-us{
+    position: relative;
+    margin-top: -0.5rem;
+}
+.about-us video{
+    width: 100%;
+}
+.about-us .about-us-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.about-us .about-desc{
+    width: 42%;
+    background-color: rgba(43, 129, 184, 0.8);
+    color: #fff;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    margin-top: 13rem;
+}
+.about-us .about-desc h1{
+    font-weight: 700;
+    font-size: calc(1.5rem + 1vw);
+}
+.about-us .about-desc p{
+    font-size: calc(0.5rem + 0.5vw);
+    text-align: justify;
+}
+.about-us .count-row{
+    position: absolute;
+    bottom: -7rem;
+    left: 8%;
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    background-image: url('../images/count-row-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 2.5rem;
+}
+.about-us .count-row .count-box{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.about-us .count-row .count-box img{
+    width: 40px;
+}
+.about-us .count-row .count-box h2{
+    margin-top: 0.7rem;
+    font-weight: 700;
+    font-size: calc(1.6rem + 0.5vw);
+    margin-bottom: 0.3rem;
+}
+.about-us .count-row .count-box p{
+    margin: 0;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .about-us .about-desc{
+        padding: 3rem 4rem 3rem 4rem;
+        margin-top: 18rem;
+    }
+    .about-us .about-desc p{
+        font-size: calc(0.55rem + 0.5vw);
+        margin-top: 0.8rem;
+    }
+    .about-us .count-row{
+        bottom: -8.2rem;
+        padding: 2.2rem 2.5rem;
+    }
+    .about-us .count-row .count-box img{
+        width: 45px;
+    }
+    .about-us .count-row .count-box h2{
+        font-size: calc(1.8rem + 0.5vw);
+        margin-bottom: 0.25rem;
+    }
+    .about-us .count-row .count-box p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+}
+/* About End */
+
+/* Chairman Start */
+.chairman{
+    margin-top: 10rem;
+    background-image: url('../images/chairman-bg-2.png');
+    background-size: cover;
+    overflow: hidden;
+}
+.chairman-content{
+    display: flex;
+    justify-content: space-between;
+}
+.chairman-content .chairman-image{
+    width: 36%;
+}
+.chairman-content .chairman-image img{
+    width: 100%;
+    /* border: 0.4rem solid #fff; */
+}
+.chairman-content .chairman-desc{
+    width: 59%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chairman-content .chairman-desc img{
+    width: 25px;
+}
+.chairman-content .chairman-desc h1{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: calc(1.8rem + 0.5vw);
+    margin-top: 0.8rem;
+}
+.chairman-content .chairman-desc p{
+    font-size: calc(0.5rem + 0.5vw);
+    margin-top: 0.7rem;
+}
+.chairman-content .chairman-desc-foot p{
+    font-size: calc(0.65rem + 0.5vw);
+    margin-top: 1.3rem;
+}
+
+
+@media screen and (max-width: 1229px){
+    .chairman-content{
+        /* padding: 3rem 5.2%; */
+        padding: 0 5.2%;
+    }
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .chairman-content{
+        padding: 0 0;
+    }
+    .chairman-content .chairman-desc h1{
+        font-size: calc(1.9rem + 0.5vw);
+        margin-top: 0.85rem;
+    }
+    .chairman-content .chairman-desc p{
+        font-size: calc(0.55rem + 0.5vw);
+        margin-top: 0.75rem;
+    }
+    .chairman-content .chairman-desc-foot p{
+        font-size: calc(0.7rem + 0.5vw);
+        margin-top: 1.4rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .chairman{
+        margin-top: 12rem;
+    }
+    .chairman-content{
+        padding: 0 1.5% 0 1.5%;
+    }
+     .chairman-content .chairman-desc h1{
+        font-size: calc(2rem + 0.5vw);
+        margin-top: 0.9rem;
+    }
+    .chairman-content .chairman-desc p{
+        font-size: calc(0.6rem + 0.5vw);
+        margin-top: 0.8rem;
+    }
+    .chairman-content .chairman-desc-foot p{
+        font-size: calc(0.8rem + 0.5vw);
+        margin-top: 1.5rem;
+    }
+}
+/* Chairman End */
+
+/* Product Details Start */
+.product-details{
+    overflow: hidden;
+    background-image: url('../images/product-details-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 7.5%;
+}
+.product-details h1{
+    text-align: center;
+    font-weight: 650;
+    font-size: calc(1.1rem + 1vw);
+}
+.product-cards-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.product-cards-row .product-card{
+    width: 18%;
+    border-radius: 10px;
+    margin-bottom: 1.7rem;
+    z-index: 10;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.product-cards-row .product-card img{
+    width: 100%;
+}
+.product-cards-row .product-card h2{
+    font-size: calc(0.6rem + 0.5vw);
+    font-weight: 600;
+    text-align: center;
+}
+.product-cards-row .product-card .layer-2 h2{
+    text-align: start;
+}
+.product-cards-row .product-card p{
+    font-size: calc(0.35rem + 0.5vw);
+    text-align: center;
+}
+.product-cards-row .product-card i{
+    font-size: calc(0.9rem + 0.5vw);
+}
+.product-cards-row .product-card .layer-1,
+.product-cards-row .product-card .layer-2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 1.5rem 1rem;
+    transition: top 0.4s ease-in-out, bottom 0.4s ease-in-out, opacity 0.7s ease-in-out;
+}
+.product-cards-row .product-card .layer-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(43, 129, 184, 0.8);
+    color: #fff;
+    bottom: 0;
+    opacity: 1;
+}
+.product-cards-row .product-card .layer-2{
+    top: -100%;
+}
+.product-cards-row .product-card .layer-1.hide {
+    bottom: -100%;
+    opacity: 0;
+}
+.product-cards-row .product-card .layer-2.show {
+    top: 0;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .product-details{
+        padding: 5rem 5%;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .product-details{
+        padding: 5rem 7%;
+    }
+    .product-cards-row .product-card h2{
+        font-size: calc(0.75rem + 0.5vw);
+    }
+    .product-cards-row .product-card p{
+        font-size: calc(0.4rem + 0.5vw);
+        margin-top: 0.3rem;
+    }
+}
+/* Product Details End */
+
+/* Media Start */
+.media{
+    padding: 3rem 5.6% 4rem 5.6%;
+}
+.media h1{
+    text-align: center;
+    font-weight: 650;
+    font-size: calc(1.1rem + 1vw);
+    color: #386c94;
+}
+.media .latest-news-head{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    margin-left: 1rem;
+}
+.media .latest-news-head button{
+    background-color: transparent !important;
+    color: #000;
+    font-weight: 600;
+    font-size: calc(0.8rem + 0.5vw);
+    border-radius: 0;
+    padding: 0.2rem 2.5rem;
+}
+.media .latest-news-head button.active{
+    color: #386c94;
+}
+.media .latest-news-head button:first-child{
+    border-right: 2px solid #386c94;
+}
+
+.media-boxes{
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.media-boxes img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.278) 0px 2px 8px 0px;
+}
+.media-boxes .media-aside{
+    width: 25%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+.media-boxes .media-center{
+    width: 47.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.media-boxes .media-center .center-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+.media-boxes .media-center .center-box:first-child{
+    margin-bottom: 1rem;
+}
+.media-boxes .media-center .center-box-left,
+.media-boxes .media-center .center-box-right{
+    width: 49%;
+}
+.media-boxes h2{
+    font-size: calc(0.5rem + 0.5vw);
+}
+.media-boxes p{
+    font-size: calc(0.33rem + 0.5vw);
+    margin-bottom: 0;
+}
+.media-boxes button{
+    font-size: calc(0.3rem + 0.5vw);
+    font-weight: 500;
+    border: none;
+    background-color: #366d96;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+.media-boxes button:hover{
+    background-color: #22567e;
+}
+.media-boxes .media-aside h2{
+    margin-top: 1rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .media{
+        padding: 4rem 1.2rem 4.5rem 1.2rem;
+    }
+    .media .latest-news-head button{
+        font-size: calc(0.88rem + 0.5vw);
+    }
+    .media .latest-news-head button:first-child{
+        border-right: 2.5px solid #386c94;
+    }
+    .media-boxes{
+        margin-top: 2rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .media{
+        padding: 4rem 1.5% 5rem 1.5%;
+    }
+    .media .latest-news-head{
+        margin: 1.8rem 0;
+        margin-left: 1.2rem;
+    }
+    .media .latest-news-head button{
+        font-size: calc(0.9rem + 0.5vw);
+        padding: 0.2rem 3rem;
+    }
+    .media .latest-news-head button:first-child{
+        border-right: 3px solid #386c94;
+    }
+    .media-boxes{
+        margin-top: 2rem;
+    }
+    .media-boxes .media-aside{
+        padding: 0.7rem;
+    }
+    .media-boxes .media-center .center-box{
+        padding: 0.7rem;
+    }
+}
+/* Media End */
+
+/* Contact Us Start */
+.contact-us{
+    background-image: url(../images/cta-bg.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+}
+.contact-us .contact-us-content{
+    padding: 3rem 5.6% 3rem 5.6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.contact-us .contact-us-content h1{
+    text-transform: uppercase;
+    font-size: calc(1.7rem + 0.5vw);
+    font-weight: 600;
+}
+.contact-us .contact-us-content p{
+    font-size: calc(0.5rem + 0.5vw);
+    text-align: center;
+    margin-top: 1rem;
+}
+.contact-us .contact-us-content button{
+    font-size: calc(0.55rem + 0.5vw);
+    border: 2px solid #fff;
+    background-color: transparent;
+    padding: 0.2rem 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+.contact-us .contact-us-content button:hover{
+    background-color: #386c94;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .contact-us .contact-us-content{
+        padding: 4.5rem 1.2rem 4rem 1.2rem;
+    }
+    .contact-us .contact-us-content h1{
+        font-size: calc(1.8rem + 0.5vw);
+    }
+    .contact-us .contact-us-content p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .contact-us .contact-us-content button{
+        font-size: calc(0.6rem + 0.5vw);
+        padding: 0.3rem 1.2rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .contact-us .contact-us-content{
+        padding: 5rem 1.5% 4.5rem 1.5%;
+    }
+    .contact-us .contact-us-content h1{
+        font-size: calc(1.9rem + 0.5vw);
+    }
+    .contact-us .contact-us-content p{
+        font-size: calc(0.65rem + 0.5vw);
+    }
+    .contact-us .contact-us-content button{
+        font-size: calc(0.68rem + 0.5vw);
+        padding: 0.4rem 1.4rem;
+    }
+}
+/* Contact Us End */
+
+/* Footer Start */
+footer{
+    background-image: url(../../assets/images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 0;
+    border-bottom: 2.5rem solid #366d96;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    bottom: 0;
+}
+footer ul li{
+    margin-bottom: 0.5rem;
+}
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 13px;
+}
+footer a {
+    color: #fff;
+    font-size: 0.75rem;
+}
+footer a:hover {
+    color: #fff;
+}
+footer .social ul li {
+    width: 1.2rem;
+}
+footer .social ul li:not(:last-child) {
+    margin-right: 0.875rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    footer h5 {
+        font-size: 1rem;
+    }
+    footer a {
+        font-size: 0.85rem;
+    }
+    footer .social ul li {
+        width: 1.5rem;
+    }
+}
+/* Footer End */
+
+/* WhatsApp Icon Start */
+.wp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+}
+.wp img{
+    width: 40px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+}
+.wp img:hover{
+    scale: 1.1;
+    box-shadow: #48b14c 0px 5px 15px;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .wp{
+        width: 45px;
+        height: 45px;
+    }
+    .wp img{
+        width: 45px;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .wp{
+        width: 48px;
+        height: 48px;
+    }
+    .wp img{
+        width: 48px;
+    }
+}
+/* WhatsApp Icon End */
+
+/* Career Start */
+ .jobs-container {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jobs-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #3A739B;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.jobs-header,
+.job-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: start;
+  border-bottom: 1px solid #eee;
+  max-width: 1200px;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.jobs-header {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+.job-role-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.job-role-details {
+  font-size: 16px;
+  color: #444;
+}
+
+.job-posted {
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+}
+
+.job-button {
+  background-color: #3A739B;
+  color: #fff;
+  padding: 14px 0;
+  width: 95%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.job-button:hover {
+  background-color: #325f7d;
+}
+
+@media (max-width: 768px) {
+  .jobs-header,
+  .job-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 16px;
+  }
+
+  .job-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+/* Career End */

@@ -1,0 +1,322 @@
+/* Banner Start */
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+}
+.banner h1{
+    position: absolute;
+    bottom: 4rem;
+    left: 8%;
+    color: #fff;
+    font-size: calc(4rem + 1vw);
+    font-weight: 700;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner h1{
+        bottom: 4rem;
+        font-size: calc(4.7rem + 1vw);
+    }
+}
+/* Banner End */
+
+/* Career Form Start */
+.career-form{
+    margin: 0 8%;
+    padding: 2rem 3rem 4rem 3rem;
+    background-image: url('../images/career-2.jpg');
+    background-size: cover;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* Form Head Start */
+.form-head{
+    width: 90.58%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.7rem 1.5rem;
+    position: absolute;
+    top: -2.5rem;
+}
+.form-head h1{
+    text-align: center;
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: 700;
+    color: #366d96;
+}
+.form-head h5{
+    font-size: calc(0.55rem + 0.5vw);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.form-head .input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+.form-head .input-row select{
+    width: 48.5%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #bbbbbb;
+    font-size: calc(0.6rem + 0.5vw);
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .form-head{
+        padding: 2.1rem 2rem;
+    }
+    .form-head h1{
+        font-size: calc(1.6rem + 0.5vw);
+    }
+    .form-head h5{
+        font-size: calc(0.65rem + 0.5vw);
+        margin-top: 1.2rem;
+    }
+    .form-head .input-row{
+        margin-top: 0.8rem;
+    }
+    .form-head .input-row select{
+        padding: 0.7rem 1.1rem;
+        border: 1.3px solid #bbbbbb;
+        font-size: calc(0.7rem + 0.5vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .form-head{
+        padding: 2.1rem 2rem;
+        top: -3rem;
+    }
+    .form-head h1{
+        font-size: calc(1.65rem + 0.5vw);
+    }
+    .form-head h5{
+        font-size: calc(0.7rem + 0.5vw);
+        margin-top: 1.4rem;
+    }
+    .form-head .input-row{
+        margin-top: 1rem;
+    }
+    .form-head .input-row select{
+        padding: 0.8rem 1.2rem;
+        border: 1.5px solid #bbbbbb;
+        font-size: calc(0.75rem + 0.5vw);
+    }
+}
+/* Form Head End */
+
+/* Form Body Start */
+.form-body{
+    margin: 0 3rem;
+    padding: 2rem 1rem;
+    background-color: #ffffff8a;
+    margin-top: 8.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.form-body h5{
+    font-size: calc(0.55rem + 0.5vw);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.form-body h5 a{
+    color: #fff;
+}
+.form-body .input-row input{
+    width: 48.5%;
+    padding: 0.6rem 1rem;
+    font-size: calc(0.55rem + 0.5vw);
+}
+.form-body .input-row input[type='file']{
+    width: 100%;
+}
+.form-body .input-row textarea{
+    padding: 0.6rem 1rem;
+    font-size: calc(0.55rem + 0.5vw);
+    min-height: 4.5rem;
+    max-height: 12rem;
+}
+.form-body .input-row label{
+    font-size: calc(0.55rem + 0.5vw);
+}
+.form-body .input-row #msg{
+    min-height: 8rem;
+    max-height: 12rem;
+}
+.form-body .submit-btn{
+    margin-top: 1.5rem;
+}
+.form-body .submit-btn button{
+    background-color: #fff;
+    border: none;
+    border-radius: 7px;
+    color: #366d96;
+    padding: 0.5rem 3rem;
+    font-size: calc(0.6rem + 0.5vw);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.1s ease;
+}
+.form-body .submit-btn button:hover{
+    background-color: #366d96;
+    color: #fff;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .form-body{
+        margin: 0 3.5rem 0 2.8rem;
+        padding: 2.5rem 2rem;
+        margin-top: 10.5rem;
+    }
+    .form-body h5{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .form-body .input-row input{
+        padding: 0.75rem 1.2rem;
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .form-body .input-row textarea{
+        padding: 0.75rem 1.2rem;
+        font-size: calc(0.6rem + 0.5vw);
+        min-height: 5.5rem;
+    }
+    .form-body .input-row label{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .form-body .input-row #msg{
+        min-height: 9rem;
+    }
+    .form-body .submit-btn{
+        margin-top: 1.8rem;
+    }
+    .form-body .submit-btn button{
+        padding: 0.6rem 3.5rem;
+        font-size: calc(0.65rem + 0.5vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .form-body{
+        margin: 0 4.2rem 0 2.8rem;
+        padding: 2.7rem 2.2rem;
+        margin-top: 11rem;
+    }
+    .form-body h5{
+        font-size: calc(0.65rem + 0.5vw);
+    }
+    .form-body .input-row input{
+        padding: 0.85rem 1.3rem;
+        font-size: calc(0.65rem + 0.5vw);
+    }
+    .form-body .input-row textarea{
+        padding: 0.85rem 1.3rem;
+        font-size: calc(0.65rem + 0.5vw);
+        min-height: 6.5rem;
+    }
+    .form-body .input-row label{
+        font-size: calc(0.65rem + 0.5vw);
+    }
+    .form-body .input-row #msg{
+        min-height: 10.5rem;
+    }
+    .form-body .submit-btn{
+        margin-top: 1.8rem;
+    }
+    .form-body .submit-btn button{
+        padding: 0.7rem 4.5rem;
+        font-size: calc(0.7rem + 0.5vw);
+    }
+}
+/* Form Body End */
+/* Career Form End */
+
+/* Life @ Nirmal Start */
+.life-nirmal{
+    margin: 3rem 8%;
+}
+.life-nirmal h1{
+    font-size: calc(2rem + 0.5vw);
+    text-align: center;
+    font-weight: 600;
+}
+.life-nirmal .content-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.life-nirmal .content-row .content{
+    width: 48%;
+}
+.life-nirmal .content-row .content img{
+    width: 100%;
+    border-radius: 7px;
+}
+.life-nirmal .content-row .content p{
+    font-size: calc(0.55rem + 0.5vw);
+}
+/* .life-nirmal .pointers-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.life-nirmal .pointers-row .pointer{
+    display: flex;
+    align-items: center;
+}
+.life-nirmal .pointers-row img{
+    width: 22px;
+    margin-right: 2px;
+}
+.life-nirmal .pointers-row p{
+    font-size: calc(0.45rem + 0.5vw);
+    font-weight: 550;
+    margin: 0;
+} */
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .life-nirmal{
+        margin: 3.5rem 8%;
+    }
+    .life-nirmal h1{
+        font-size: calc(2.3rem + 0.5vw);
+    }
+    .life-nirmal .content-row .content p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    /* .life-nirmal .pointers-row img{
+        width: 26px;
+        margin-right: 2px;
+    }
+    .life-nirmal .pointers-row p{
+        font-size: calc(0.5rem + 0.5vw);
+    } */
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .life-nirmal{
+        margin: 4rem 8%;
+    }
+    .life-nirmal h1{
+        font-size: calc(2.6rem + 0.5vw);
+    }
+    .life-nirmal .content-row .content p{
+        font-size: calc(0.7rem + 0.5vw);
+    }
+    /* .life-nirmal .pointers-row img{
+        width: 29px;
+        margin-right: 2px;
+    }
+    .life-nirmal .pointers-row p{
+        font-size: calc(0.55rem + 0.5vw);
+    } */
+}
+/* Life @ Nirmal End */

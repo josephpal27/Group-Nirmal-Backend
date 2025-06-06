@@ -1,0 +1,500 @@
+/* Banner Start */
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #072137a1;
+}
+.banner-content{
+    width: 100%;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 8%;
+    color: #fff;
+}
+.banner-content h1{
+    font-weight: 650;
+    font-size: calc(3.5rem + 1vw);
+    text-transform: uppercase;
+}
+.banner-content p{
+    width: 70%;
+    font-weight: 500;
+    font-size: calc(0.55rem + 0.5vw);
+    margin-top: 0.8rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner-content h1{
+        font-size: calc(4rem + 1vw);
+    }
+}
+/* Banner End */
+
+/* Features Start */
+.features{
+    margin: 3rem 8%;
+}
+.features h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+}
+.features-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.feature-card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.7rem 0;
+}
+.feature-card:nth-child(2){
+    border-right: 0.45rem solid #194b71;
+    border-left: 0.45rem solid #194b71;
+    width: 36%;
+    padding: 0.7rem 1rem;
+}
+.feature-card .card-img{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-card img{
+    width: 20%;
+}
+.feature-card h3{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.75rem + 0.5vw);
+    margin-top: 0.5rem;
+    text-align: center;
+    min-height: 2.3rem;
+}
+.feature-card p{
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: calc(0.48rem + 0.5vw);
+    margin-top: 0.5rem;
+}
+/* 6 Feature Cards */
+.six-feature-card-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+.six-feature-card-row .feature-card{
+    width: 33.3%;
+    padding: 0.7rem 1rem;
+}
+.six-feature-card-row .feature-card:nth-child(1),
+.six-feature-card-row .feature-card:nth-child(2),
+.six-feature-card-row .feature-card:nth-child(3){
+    border-bottom: 0.45rem solid #194b71;
+}
+.six-feature-card-row .feature-card:nth-child(2),
+.six-feature-card-row .feature-card:nth-child(5){
+    border-right: 0.45rem solid #194b71;
+    border-left: 0.45rem solid #194b71;
+    padding: 0.7rem 0.5rem;
+}
+.six-feature-card-row .feature-card .card-img{
+    height: 6rem;
+}
+.six-feature-card-row .feature-card img{
+    width: 18%;
+}
+.six-feature-card-row .feature-card:nth-child(4) .card-img img{
+    width: 9%;
+}
+.six-feature-card-row .feature-card h3{
+    margin-top: 0.3rem;
+    min-height: 1rem;
+}
+
+/* 5 Features Cards */
+.five-feature-card-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+.five-feature-card-row .feature-card{
+    width: 33.3%;
+    padding: 0.7rem 1rem;
+}
+.five-feature-card-row .feature-card:nth-child(1),
+.five-feature-card-row .feature-card:nth-child(2),
+.five-feature-card-row .feature-card:nth-child(3){
+    border-bottom: 0.45rem solid #194b71;
+}
+.five-feature-card-row .feature-card:nth-child(4),
+.five-feature-card-row .feature-card:nth-child(5){
+    width: 50%;
+    padding-top: 1rem;
+}
+.five-feature-card-row .feature-card:nth-child(4){
+    border-right: 0.45rem solid #194b71;
+}
+.five-feature-card-row .feature-card .card-img{
+    height: 6rem;
+}
+.five-feature-card-row .feature-card:nth-child(1) img{
+    width: 16.5%;
+}
+.five-feature-card-row .feature-card:nth-child(3) img{
+    width: 9%;
+}
+.five-feature-card-row .feature-card:nth-child(4) img{
+    width: 11%;
+}
+.five-feature-card-row .feature-card:nth-child(5) img{
+    width: 12%;
+}
+.five-feature-card-row .feature-card h3{
+    margin-top: 0.3rem;
+    min-height: 0.8rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .feature-card .card-img{
+        height: 8.5rem;
+    }
+    .feature-card h3{
+        font-size: calc(0.9rem + 0.5vw);
+        min-height: 3rem;
+    }
+    .feature-card p{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+    .six-feature-card-row .feature-card .card-img{
+        height: 8.2rem;
+    }
+    .six-feature-card-row .feature-card img{
+        width: 17%;
+    }
+    .five-feature-card-row .feature-card .card-img{
+        height: 7.5rem;
+    }
+    .five-feature-card-row .feature-card:nth-child(4),
+    .five-feature-card-row .feature-card:nth-child(5){
+        padding-top: 1.7rem;
+}
+}
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .six-feature-card-row .feature-card{
+        padding: 0.7rem 1rem !important;
+    }
+    .six-feature-card-row .feature-card .card-img{
+        height: 6.7rem;
+    }
+    .six-feature-card-row .feature-card img{
+        width: 17%;
+    }
+    .five-feature-card-row .feature-card .card-img{
+        height: 8rem;
+    }
+}
+/* Features End */
+
+/* Applications Start */
+.apps{
+    margin: 3.5rem 8% 2rem 8%;
+}
+.apps h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+}
+.apps-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+.apps-card-outer{
+    width: 45%;
+}
+.apps-card{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.apps-card img{
+    width: 100%;
+}
+.apps-card .apps-card-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    padding: 1.5rem;
+    background-color: #022746bf;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+.apps-card .apps-card-layer p{
+    color: #fff;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+    text-align: center;
+}
+.apps-card-outer h3{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.8rem + 0.5vw);
+    margin: 0;
+    margin-top: -1.2rem;
+    text-align: center;
+}
+
+/* 5 Apps Row */
+.five-apps-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+.five-apps-row .apps-card-outer{
+    width: 30%;
+    margin-bottom: 2.5rem;
+}
+.five-apps-row .apps-card-layer{
+    padding: 0.7rem;
+}
+.five-apps-row .apps-card-outer p{
+    font-size: calc(0.45rem + 0.5vw);
+}
+
+/* 6 Apps Row */
+.six-apps-row{
+    padding: 0 1rem;
+}
+.six-apps-row{
+    gap: 7%;
+}
+.six-apps-row .apps-card-outer{
+    width: 28%;
+    margin-bottom: 2rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .apps-row{
+        margin-top: 1.7rem;
+    }
+    .apps-card .apps-card-layer p{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+    .apps-card-outer h3{
+        font-size: calc(0.95rem + 0.5vw);
+        margin-top: -0.5rem;
+    }
+
+    .five-apps-row{
+        margin-top: 2.5rem;
+    }
+    .five-apps-row .apps-card-outer{
+        margin-bottom: 3rem;
+    }
+
+    .six-apps-row{
+        margin-bottom: -1rem;
+    }
+    .six-apps-row .apps-card-outer{
+        margin-bottom: 1.9rem;
+    }
+    .six-apps-row .apps-card-outer h3{
+        margin-top: -1.3rem;
+    }
+}
+/* Applications End */
+
+/* Quality Assurance Start */
+.quality{
+    margin: 3rem 8%;
+}
+.quality h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+    text-transform: uppercase;
+}
+.quality p{
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+    max-width: 70%;
+    margin-left: 15%;
+    margin-top: 1rem;
+}
+.quality-card-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.quality-card{
+    width: 24.5%;
+}
+.quality-card .card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5rem;
+}
+.quality-card img{
+    width: 26%;
+}
+.quality-card .card-desc{
+    min-height: 3rem;
+}
+.quality-card h3{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.75rem + 0.5vw);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.quality-card p{
+    margin: 0;
+    text-align: center;
+    max-width: 95%;
+    margin-left: 2.5%;
+    font-size: calc(0.4rem + 0.5vw);
+    margin-top: 0.3rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .quality p{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+    .quality-card .card-img{
+        height: 8rem;
+    }
+    .quality-card img{
+        width: 25%;
+    }
+    .quality-card h3{
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    .quality-card p{
+        font-size: calc(0.5rem + 0.5vw);
+        margin-top: 0.7rem;
+    }
+}
+/* Quality Assurance End */
+
+/* Why Choose Us Start */
+.why-choose-us{
+    margin: 0 8%;
+}
+.why-choose-us h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+    text-transform: uppercase;
+}
+.choose-us-card-row{
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 13%
+}
+.choose-us-card{
+    width: 45%;
+}
+.choose-us-card .card-img{
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choose-us-card .card-img img{
+    width: 20%;
+}
+.choose-us-card h3{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.75rem + 0.5vw);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.choose-us-card p{
+    text-align: center;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+    margin-top: 0.7rem;
+}
+
+.zinc-choose-us-card-row{
+    padding: 0;
+}
+.zinc-choose-us-card-row .choose-us-card{
+    width: 25%;
+}
+.zinc-choose-us-card-row .choose-us-card .card-img{
+    height: 6rem;
+}
+.zinc-choose-us-card-row .choose-us-card .card-img img{
+    width: 25%;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .choose-us-card .card-img{
+        height: 7.5rem;
+    }
+    .choose-us-card .card-img img{
+        width: 19%;
+    }
+    .choose-us-card h3{
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    .choose-us-card p{
+        font-size: calc(0.55rem + 0.5vw);
+        margin-top: 0.7rem;
+    }
+
+    .zinc-choose-us-card-row .choose-us-card .card-img{
+        height: 7.3rem;
+    }
+}
+/* Why Choose Us End */
+
+/* Footer Start */
+footer{
+    margin-top: 1.2rem;
+}
+/* Footer End */

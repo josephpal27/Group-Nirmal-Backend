@@ -1,0 +1,267 @@
+/* Banner Start */
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+}
+.banner h1{
+    position: absolute;
+    bottom: 4rem;
+    left: 8%;
+    color: #fff;
+    font-size: calc(4rem + 1vw);
+    font-weight: 700;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner h1{
+        bottom: 4rem;
+        font-size: calc(4.7rem + 1vw);
+    }
+}
+/* Banner End */
+
+/* Approvals Start */
+ .approvals{
+    padding: 2.5rem 8% 3.5rem 8%;
+}
+ .approvals h2{
+    text-align: center;
+    font-weight: 700;
+    color: #396a91;
+    font-size: calc(1.2rem + 1vw);
+}
+.approval-icons-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.7rem;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 0.5rem;
+  }
+  .approval-icons-row .approval-icon{
+    display: flex;
+    align-items: center;
+  }
+  .approval-icons-row .approval-icon img{
+    width: 80%;
+  }
+/* Approvals End */
+
+/* Product License Start */
+.license{
+    padding: 1rem 8%;
+}
+.license-left{
+    padding: 1rem 0;
+}
+.license-right{
+    padding: 1rem 0;
+}
+.license h2{
+    font-size: calc(1rem + 1vw);
+    font-weight: 700;
+    color: #396a91;
+    text-transform: uppercase;
+    text-align: center;
+}
+.license .table{
+    margin-top: 1.5rem;
+    width: 100%;
+    font-size: calc(0.45rem + 0.5vw);
+    border-color: #366d96 !important;
+}
+.table thead th {
+    background-color: #366d96;
+    padding: 0.9rem 0;
+}
+.table tbody tr th {
+    background-color: #d9d9d9;
+    width: 18%;
+}
+.table tbody tr th,
+.table tbody tr td {
+    padding: 0.6rem 0.7rem;
+    color: #366d96;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .license h2{
+        font-size: calc(1rem + 1vw);
+    }
+    .license .table{
+        font-size: calc(0.5rem + 0.5vw);
+    }
+}
+/* Product License End */
+
+/* Policy Start */
+.policy{
+    background-image: url(../images/quality/quality-banner-2.png);
+    background-size: cover;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+.policy-layer{
+    position: absolute;
+    top: 5.5rem;
+    left: 8%;
+    width: 45%;
+}
+.policy-layer h1{
+    font-weight: 650;
+    font-size: calc(1.25rem + 1vw);
+    color: #164b74;
+}
+.policy-layer p{
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+    color: #164b74;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .policy-layer{
+        top: 6rem;
+    }
+    .policy-layer p{
+        font-size: calc(0.6rem + 0.5vw);
+        margin-top: 1.2rem;
+    }
+}
+/* Policy End */
+
+/* Assurance Cards Start */
+.assurance-cards-container{
+    padding: 3rem 8%;
+}
+.assurance-cards-container p{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+}
+.assurance-cards-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.7rem;
+}
+.assurance-card{
+    width: 24%;
+    /* overflow: hidden; */
+    text-align: center;
+    
+}
+.assurance-card img{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.assurance-card h3{
+    font-size: calc(0.6rem + 0.5vw);
+    font-weight: 700;
+    color: #505050;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.assurance-card p{
+    width: 100%;
+    margin-left: 0;
+    font-size: calc(0.33rem + 0.5vw);
+    font-weight: 500;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .assurance-cards-container{
+        padding: 3.5rem 8%;
+    }
+    .assurance-cards-container p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .assurance-cards-row{
+        margin-top: 2rem;
+    }
+    .assurance-card h3{
+        font-size: calc(0.67rem + 0.5vw);
+    }
+    .assurance-card p{
+        font-size: calc(0.41rem + 0.5vw);
+    }
+}
+/* Assurance Cards End */
+
+/* Accomplish Start */
+.accomplish{
+    padding: 1rem 8% 3.5rem 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.accomplish-img{
+    width: 35%;
+}
+.accomplish-img img{
+    width: 100%;
+    border-right: 0.7rem solid #d1d1d1;
+}
+.accomplish-text{
+    width: 65%;
+    background-color: #fff;
+    padding: 0 0 0 2rem;
+}
+.accomplish-text h3{
+    color: #194b71;
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.accomplish-text ul{
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 500;
+    color: #1d5179;
+    list-style: none;
+    padding: 0;
+    padding-left: 1.2rem;
+}
+.accomplish-text ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.accomplish-text ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11.5px;
+    transform: translateY(-50%);
+    width: 9px; /* Width of the marker */
+    height: 9px; /* Height of the marker */
+    background-color: #0c324f; 
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .accomplish-text ul{
+        font-size: calc(0.57rem + 0.5vw);
+        margin-top: 1.2rem;
+    }
+    .accomplish-text ul li::before {
+        width: 11px;
+        height: 11px;
+    }
+}
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px) {
+    .accomplish-text ul{
+        margin-top: 1.2rem;
+    }
+}
+/* Accomplish End */

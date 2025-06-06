@@ -1,0 +1,239 @@
+/* Banner Start */
+.about-banner{
+    width: 100%;
+    position: relative;
+}
+.about-banner img{
+    width: 100%;
+}
+.banner-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1134529b;
+}
+.about-banner h1{
+    font-weight: 650;
+    font-size: calc(4rem + 1vw);
+    position: absolute;
+    bottom: 4rem;
+    left: 8%;
+    color: #fff;
+}
+
+@media screen and (max-width: 1220px){
+    .about-banner{
+        height: 88vh;
+    }
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+   
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    
+}
+/* Banner End */
+
+/* Contact Box Start */
+.contact-box{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.252) 0px 5px 13px;
+    margin: 3rem 8%;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.contact-box-left{
+    width: 76%;
+    padding: 2rem 3rem;
+}
+.contact-box-left .contact-form{
+    width: 70%;
+}
+.contact-box-left .contact-form h1{
+    font-size: calc(0.8rem + 1vw);
+    font-weight: 650;
+    color: #366d96;
+}
+.contact-box-left .contact-form form{
+    margin-top: 1rem;
+}
+.contact-box-left .contact-form form input{
+    margin-bottom: 0.7rem;
+    font-size: calc(0.46rem + 0.5vw);
+    border-radius: 3px;
+    box-shadow: none;
+}
+.contact-box-left .contact-form form label{
+    font-size: calc(0.42rem + 0.5vw);
+}
+.contact-box-left .contact-form form textarea{
+    font-size: calc(0.46rem + 0.5vw);
+    margin-bottom: 0.7rem;
+    min-height: 7rem;
+    max-height: 10rem;
+    border-radius: 3px;
+    box-shadow: none;
+}
+.contact-box-left .contact-form form button{
+    font-size: calc(0.46rem + 0.5vw);
+    width: 100%;
+    border: none;
+    padding: 1rem 0;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #c32323;
+    transition: all 0.2s ease;
+}
+.contact-box-left .contact-form form button:hover{
+    background-color: #a51212;
+}
+.contact-box-right{
+    width: 24%;
+    background-color: #194b70;
+}
+.contact-box-right .contact-map{
+    position: absolute;
+    right: 3rem;
+    bottom: 20%;
+    width: 38.8%;
+    height: 60%;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.175) 0px 2px 7px;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .contact-box{
+        margin: 4.5rem 8% 4rem 8%;
+    }
+    .contact-box-left{
+        padding: 3.5rem 3.3rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .contact-box{
+        margin: 5rem 8% 4.2rem 8%;
+    }
+    .contact-box-left{
+        padding: 4.5rem 4rem;
+    }
+    .contact-box-left .contact-form form input{
+        margin-bottom: 0.8rem;
+        font-size: calc(0.48rem + 0.5vw);
+    }
+    .contact-box-left .contact-form form label{
+        font-size: calc(0.44rem + 0.5vw);
+    }
+    .contact-box-left .contact-form form textarea{
+        font-size: calc(0.48rem + 0.5vw);
+        margin-bottom: 0.8rem;
+        min-height: 8rem;
+        max-height: 11rem;
+    }
+    .contact-box-left .contact-form form button{
+        font-size: calc(0.48rem + 0.5vw);
+    }
+}
+/* Contact Box End */
+
+/* Corporate Office Start */
+.corporate-office{
+    margin: 0 8%;
+    padding: 0.5rem 0;
+}
+.corporate-office h1{
+    border-bottom: 1px solid #9d9d9d;
+    font-size: calc(0.7rem + 1vw);
+    font-weight: 650;
+    color: #366d96;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.corporate-office .corp-card-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+}
+.corporate-office .corp-card{
+    width: 43%;
+    border: 1px dashed #194b70;
+    margin-top: 0.8rem;
+    padding: 1rem;
+}
+.corporate-office .corp-card h2{
+    font-size: calc(0.7rem + 0.5vw);
+    font-weight: 700;
+}
+.corporate-office .corp-card p{
+    font-size: calc(0.45rem + 0.5vw);
+    margin: 0;
+    margin-top: 0.1rem;
+    font-weight: 450;
+}
+.corporate-office .corp-card a{
+    font-size: calc(0.45rem + 0.5vw);
+    margin-top: 0.4rem;
+    display: block;
+    font-weight: 430;
+}
+/* Corporate Office End */
+
+/* Manufacturing Units Start */
+.manufacturing-units{
+    padding: 2.5rem 8%;
+}
+.manufacturing-units h1{
+    border-bottom: 1px solid #9d9d9d;
+    font-size: calc(0.7rem + 1vw);
+    font-weight: 650;
+    color: #366d96;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.manufacturing-card-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+    margin-top: 1.3rem;
+}
+.manufacturing-card-row .manufacturing-card{
+    width: 23.85%;
+    border: 1px dashed #194b70;
+    padding: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.manufacturing-card-row .manufacturing-card h2{
+    font-size: calc(0.7rem + 0.5vw);
+    font-weight: 700;
+}
+.manufacturing-card-row .manufacturing-card p{
+    font-size: calc(0.45rem + 0.5vw);
+    margin: 0;
+    margin-top: 0.1rem;
+    font-weight: 450;
+}
+.manufacturing-card-row .manufacturing-card a{
+    font-size: calc(0.45rem + 0.5vw);
+    margin-top: 0.4rem;
+    display: block;
+    font-weight: 430;
+}
+/* Manufacturing Units End */
+
+/* Footer Start */
+footer{
+    margin-top: 0.7rem;
+}
+/* Footer End */

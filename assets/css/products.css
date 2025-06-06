@@ -1,0 +1,111 @@
+.banner.inner-banner.product-banner {
+    height: 60vh;
+    background-image: url('../images/product-banner.jpg');
+    background-size: cover;
+}
+.product-container{
+    overflow: hidden;
+}
+.padded-container{
+    padding: 1rem 4% 1rem 6%;
+}
+.heading {
+    font-size: calc(1.2rem + 1vw);
+    font-weight: 600;
+    margin: 2.5rem 0 1.3rem 0;
+}
+.products .sub-heading {
+    background-color: #194b71;
+    padding: 0.8rem 1.4rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: calc(0.6rem + 0.5vw);
+}
+.products #ban-2 {
+    margin-top: 1.5rem;
+}
+.products .nav-pills .nav-link {
+    background-color: #d9d9d9;
+    margin-bottom: 0.15rem;
+    border-radius: 0;
+    padding: 1.15rem 2rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: calc(0.55rem + 0.5vw);
+    color: #194b71;
+}
+.products .nav-pills .nav-link.active {
+    font-weight: 700;
+}
+.products .nav-pills .nav-link.active span {
+    text-decoration: underline;
+}
+  .products .tab-content .card {
+    text-align: center;
+    width: 105%;
+}
+.products .tab-content .card .card-img {
+    border: 6px solid #d9d9d9;
+    border-radius: 0;
+    width: 170px;
+    height: 122px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.15);
+    margin: 0 auto 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+.products .tab-content .card .card-img:hover {
+    scale: 1.1;
+}
+.products .tab-content .card .card-body h3 {
+    color: #194b71;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: calc(0.55rem + 0.5vw);
+    cursor: pointer;
+}
+.products .tab-content .card .card-footer .btn {
+    background-color: #194b71;
+    padding: 0.5rem 1.3rem;
+    color: #fff;
+    border-radius: 0;
+    font-weight: 600;
+    box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .banner.inner-banner.product-banner {
+        height: 63vh;
+    }
+    .padded-container{
+        padding: 1rem 4% 1rem 6.7%;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner.inner-banner.product-banner {
+        height: 64vh;
+    }
+    .heading {
+        font-size: calc(1.6rem + 1vw);
+        margin: 2.5rem 0 1.3rem 0;
+    }
+    .padded-container{
+        padding: 1rem 4% 1rem 6.8%;
+    }
+    .products .nav-pills .nav-link {
+        margin-bottom: 0.25rem;
+        font-size: calc(0.65rem + 0.5vw);
+    }
+    .products .tab-content .card .card-body h3 {
+        font-size: calc(0.65rem + 0.5vw);
+    }
+}

@@ -1,0 +1,82 @@
+/* Banner Start */
+.banner{
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+}
+/* Banner End */
+
+/* Doc Start */
+.doc{
+    height: 100vh;
+    background-image: url('../images/download-bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.doc h1{
+    margin: 0;
+    margin-top: -1.5rem;
+    font-size: calc(1.8rem + 0.5vw);
+    font-weight: 650;
+    color: #1a486b;
+}
+.doc-row{
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.doc-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+.doc-box img{
+    width: 42%;
+}
+.doc-box h2{
+    margin-top: 1.8rem;
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 600;
+}
+.doc-box a{
+    color: #285f88;
+    margin-top: 0.1rem;
+    font-size: calc(0.7rem + 0.5vw);
+    font-weight: 550;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .doc-row{
+        padding: 0 10.5%;
+    }
+    .doc-box img{
+        width: 44%;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .doc-row{
+        padding: 0 8%;
+    }
+    .doc-box img{
+        width: 45%;
+    }
+    .doc-box h2{
+        font-size: calc(1.15rem + 0.5vw);
+        margin-top: 2.2rem;
+    }
+    .doc-box a{
+        font-size: calc(0.8rem + 0.5vw);
+        margin-top: 0.4rem;
+    }
+}
+/* Doc End */

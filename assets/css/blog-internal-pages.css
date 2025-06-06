@@ -1,0 +1,218 @@
+/* Banner Start */
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-layer h1{
+    font-weight: 700;
+    font-size: calc(3.2rem + 1vw);
+}
+.banner-layer p{
+    font-weight: 500;
+    font-size: calc(0.52rem + 0.5vw);
+    text-align: center;
+    width: 70%;
+    margin-top: 1rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .banner-layer h1{
+        font-size: calc(3.6rem + 1vw);
+    }
+    .banner-layer p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner-layer h1{
+        font-size: calc(3.9rem + 1vw);
+    }
+    .banner-layer p{
+        font-size: calc(0.67rem + 0.5vw);
+    }
+}
+/* Banner End */
+
+/* Content Banner Start */
+.content-banner{
+    padding: 3rem 8%;
+}
+.content-banner img{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+/* Content Banner End */
+
+/* Blog Content Start */
+.blog-content{
+    padding: 3rem 8% 0.5rem 8%;
+}
+.blog-content h2{
+    font-size: calc(2rem + 0.5vw);
+    font-weight: 700;
+    color: #386d94;
+    margin-bottom: 1rem;
+}
+.blog-content h3{
+    font-size: calc(1.3rem + 0.5vw);
+    font-weight: 650;
+    color: #386d94;
+    margin-bottom: 0.7rem;
+    margin-top: 1.5rem;
+}
+.blog-content h4{
+    font-size: calc(0.8rem + 0.5vw);
+    font-weight: 650;
+    color: #386d94;
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+}
+.blog-content p{
+    font-size: calc(0.55rem + 0.5vw);
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.blog-content p .grey{
+    color: #606060;
+}
+.blog-content ul li{
+    font-size: calc(0.55rem + 0.5vw);
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.blog-content ul li::marker {
+    color: #386d94;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .blog-content h2{
+        font-size: calc(2.2rem + 0.5vw);
+        margin-bottom: 1.1rem;
+    }
+    .blog-content h3{
+        font-size: calc(1.4rem + 0.5vw);
+        margin-bottom: 1rem;
+        margin-top: 1.8rem;
+    }
+    .blog-content h4{
+        font-size: calc(0.9rem + 0.5vw);
+        margin-bottom: 0.7rem;
+        margin-top: 1.3rem;
+    }
+    .blog-content p{
+        font-size: calc(0.6rem + 0.5vw);
+        margin-bottom: 1.3rem;
+    }
+    .blog-content ul li{
+        font-size: calc(0.6rem + 0.5vw);
+        margin-bottom: 1.3rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .blog-content h2{
+        font-size: calc(2.4rem + 0.5vw);
+        margin-bottom: 1.4rem;
+    }
+    .blog-content h3{
+        font-size: calc(1.5rem + 0.5vw);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    .blog-content h4{
+        font-size: calc(1.1rem + 0.5vw);
+        margin-bottom: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    .blog-content p{
+        font-size: calc(0.65rem + 0.5vw);
+        margin-bottom: 1.5rem;
+    }
+    .blog-content ul li{
+        font-size: calc(0.65rem + 0.5vw);
+        margin-bottom: 1.5rem;
+    }
+}
+/* Blog Content End */
+
+/* Social icon Start */
+.social-row{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+.social-row a{
+    width: 40px;
+    height: 40px;
+    background-color: #386d94;
+    border-radius: 50%;
+}
+.social-row img{
+    width: 92%;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+.social-row img:hover{
+    box-shadow: #386d94 0px 3px 6px, #386d94 0px 3px 6px;
+    width: 100%;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .social-row a{
+        width: 43px;
+        height: 43px;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .social-row{
+        gap: 1.3rem;
+    }
+    .social-row a{
+        width: 47px;
+        height: 47px;
+    }
+}
+/* Social icon End */
+
+/* Footer Start */
+footer{
+    margin-top: 4rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    footer{
+        margin-top: 4.3rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    footer{
+        margin-top: 5.2rem;
+    }
+}
+/* Footer End */

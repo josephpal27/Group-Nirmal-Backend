@@ -1,0 +1,197 @@
+/* Banner Start */
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-layer h1{
+    font-weight: 700;
+    font-size: calc(4rem + 1vw);
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .banner-layer h1{
+        font-size: calc(4.4rem + 1vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner-layer h1{
+        font-size: calc(4.7rem + 1vw);
+    }
+}
+/* Banner End */
+
+/* Blogs Start */
+.blogs{
+    margin: 1.5rem 5%;
+    overflow-x: hidden;
+}
+.blog-card-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2.2rem;
+    padding: 0 3%;
+    margin-bottom: 2rem;
+}
+.blog-card{
+    width: 47%;
+    background-color: #5281a4;
+    color: #fff;
+    margin-bottom: 3.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.212) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+.blog-card .card-body{
+    padding: 1rem 1rem 1.3rem 1rem;
+}
+.blog-card img{
+    width: 100%;
+}
+.blog-card h3{
+    font-size: calc(1.1rem + 0.5vw);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.blog-card p{
+    font-size: calc(0.45rem + 0.5vw);
+}
+.blog-card button{
+    font-size: calc(0.5rem + 0.5vw);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.blog-card button:hover{
+    transform: translateX(5px);
+}
+.blog-card button img{
+    width: 12px;
+    margin-left: 3px;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .blog-card .card-body{
+        padding: 1.1rem 1.1rem 1.3rem 1.1rem;
+    }
+    .blog-card p{
+        font-size: calc(0.5rem + 0.5vw);
+        margin-top: 0.6rem;
+    }
+    .blog-card button{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .blog-card .card-body{
+        padding: 1.2rem 1.3rem 1.4rem 1.3rem;
+    }
+    .blog-card p{
+        font-size: calc(0.55rem + 0.5vw);
+        margin-top: 0.8rem;
+    }
+    .blog-card button{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+}
+/* Blogs End */
+
+
+.swiper-container{
+    position: relative;
+}
+.swiper-pagination span {
+    display: inline-block;
+    margin: 0 7px !important;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: calc(0.8rem + 0.5vw);
+    background-color: #999999;
+    color: #000;
+    font-weight: 800;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.swiper-pagination span.swiper-pagination-bullet-active {
+    background-color: #366d96;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* .swiper-button-next{
+    margin-top: 63%;
+    margin-right: 35%;
+    position: absolute;
+    font-size: 1rem;
+} */
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .swiper-pagination span {
+        margin: 0 8px !important;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+        font-size: calc(0.83rem + 0.5vw);
+    }
+    .blog-card-row{
+        margin-top: 2.3rem;
+        margin-bottom: 2.5rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .swiper-pagination span {
+        margin: 0 9px !important;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: calc(0.95rem + 0.5vw);
+    }
+    .blog-card-row{
+        margin-top: 2.7rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Footer Start */
+footer{
+    margin-top: 3rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    footer{
+        margin-top: 3.3rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    footer{
+        margin-top: 4.2rem;
+    }
+}
+/* Footer End */
+

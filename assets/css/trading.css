@@ -1,0 +1,237 @@
+/* Banner Start */
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #072137b3;
+}
+.banner-content{
+    width: 67%;
+    position: absolute;
+    bottom: 3rem;
+    left: 8%;
+    color: #fff;
+}
+.banner-content h1{
+    font-weight: 650;
+    font-size: calc(4rem + 1vw);
+}
+.banner-content p{
+    font-weight: 500;
+    font-size: calc(0.55rem + 0.5vw);
+    margin-top: 0.8rem;
+}
+/* Banner End */
+
+/* Products Start */
+.products{
+    padding: 1.5rem 1rem;
+    margin: 3rem 8%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 10px;
+    border-radius: 5px;
+}
+.products h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+}
+.product-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.product-row .product-card{
+    width: 32%;
+    cursor: pointer;
+    padding: 1rem;
+}
+.product-row .product-card img{
+    width: 100%;
+    transition: all 0.3s ease;
+    /* padding: 1.2rem; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.product-row .product-card img:hover{
+    scale: 1.02;
+}
+.product-row .product-card .card-desc{
+    padding: 2rem 0 0 0;
+    text-align: center;
+}
+.product-row .product-card .card-desc h2{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.9rem + 0.5vw);
+}
+.product-row .product-card .card-desc p{
+    color: #000;
+    font-weight: 500;
+    font-size: calc(0.45rem + 0.5vw);
+}
+.product-row .product-card .card-desc button{
+    margin-top: 0.8rem;
+    background-color: #1d5179;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.9rem 0.25rem 0.9rem;
+    font-weight: 450;
+    font-size: calc(0.43rem + 0.5vw);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+.product-row .product-card .card-desc button:hover{
+    background-color: #0c3e64;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .products{
+        margin: 3.5rem 8% 3rem 8%;
+    }
+    .product-row .product-card{
+        width: 31%;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .products{
+        margin: 3.7rem 8% 3.5rem 8%;
+        padding: 1.8rem 1.3rem;
+    }
+    .product-row .product-card{
+        width: 31%;
+    }
+    .product-row .product-card .card-desc{
+        padding: 2.5rem 1rem 0.5rem 1rem;
+    }
+    .product-row .product-card .card-desc h2{
+        font-size: calc(1rem + 0.5vw);
+    }
+    .product-row .product-card .card-desc p{
+        font-size: calc(0.55rem + 0.5vw);
+        margin-top: 0.9rem;
+    }
+}
+/* Products End */
+
+/* Why Choose Us Start */
+.why-choose-us{
+    margin: 0 8%;
+}
+.why-choose-us h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+}
+.why-choose-us-row{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.choose-us-card{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.choose-us-card .card-img{
+    min-height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choose-us-card img{
+    width: 33%;
+}
+.choose-us-card h2{
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(0.8rem + 0.5vw);
+    margin-top: 0.5rem;
+}
+.choose-us-card p{
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: calc(0.45rem + 0.5vw);
+    margin-top: 0.2rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .why-choose-us-row{
+        margin-top: 2.1rem;
+    }
+    .choose-us-card h2{
+        margin-top: 1rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .why-choose-us-row{
+        margin-top: 2.2rem;
+    }
+    .choose-us-card h2{
+        font-size: calc(0.95rem + 0.5vw);
+        margin-top: 1.2rem;
+    }
+    .choose-us-card p{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+}
+/* Why Choose Us End */
+
+/* Partner With Us Start */
+.partner{
+    margin-top: 2rem;
+    height: 60vh;
+    background-image: url('../images/trading/partner-with-us-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.partner h1{
+    text-align: center;
+    color: #1d5179;
+    font-weight: 700;
+    font-size: calc(1.7rem + 0.5vw);
+    text-transform: uppercase;
+}
+.partner p{
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: calc(0.5rem + 0.5vw);
+    margin-top: 1.2rem;
+    width: 55%;
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .partner{
+        margin-top: 3rem;
+    }
+    .partner p{
+        font-size: calc(0.57rem + 0.5vw);
+        margin-top: 1.2rem;
+    }
+}
+/* Partner With Us End */

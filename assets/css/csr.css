@@ -1,0 +1,441 @@
+/* Banner Start */
+.banner{
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+}
+.banner .banner-logo{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+.banner .banner-logo img{
+    width: 180px;
+}
+.banner .banner-text{
+    position: absolute;
+    bottom: 3.5rem;
+    left: 8%;
+    color: #fff;
+}
+.banner h1{
+    font-size: calc(4rem + 1vw);
+    font-weight: 700;
+}
+.banner p{
+    font-weight: 500;
+    font-size: calc(0.55rem + 0.5vw);
+    margin-top: 1rem;
+    width: 90%;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .banner .banner-logo img{
+        width: 210px;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner h1{
+        bottom: 4rem;
+        font-size: calc(4.7rem + 1vw);
+    }
+    .banner p{
+        font-size: calc(0.65rem + 0.5vw);
+        margin-top: 1rem;
+    }
+    .banner .banner-logo img{
+        width: 230px;
+    }
+}
+/* Banner End */
+
+/* Top Text Start */
+.top-text{
+    padding: 3rem 8%;
+}
+.top-text h2{
+    margin: 0;
+    text-align: center;
+    color: #366d96;
+    font-size: calc(1.4rem + 0.5vw);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.top-text p{
+    margin: 0;
+    font-size: calc(0.55rem + 0.5vw);
+    margin-top: 0.8rem;
+}
+
+#our-presence-tabs{
+    margin-top: 3rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .top-text{
+        padding: 3.5rem 8%;
+    }
+    .top-text h2{
+        font-size: calc(1.5rem + 0.5vw);
+    }
+    .top-text p{
+        font-size: calc(0.6rem + 0.5vw);
+        margin-top: 0.9rem;
+    }
+    #our-presence-tabs{
+        margin-top: 3.5rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .top-text{
+        padding: 3.8rem 8%;
+    }
+    .top-text h2{
+        font-size: calc(1.65rem + 0.5vw);
+    }
+    .top-text p{
+        font-size: calc(0.68rem + 0.5vw);
+        margin-top: 1rem;
+    }
+    #our-presence-tabs{
+        margin-top: 3.8rem;
+    }
+}
+/* Top Text End */
+
+/* CSR Tabs Start */
+.csr-tabs{
+    padding: 0 8% 3rem 8%;
+}
+.csr-tabs .csr-tab-head{
+    border-bottom: 1.2px solid #bebebe;
+}
+.csr-tabs .csr-tab-head button{
+    background-color: transparent !important;
+    color: #000 !important;
+    font-weight: 450 !important;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+.csr-tabs .csr-tab-head button:last-child{
+    margin-right: 0;
+}
+.csr-tabs .csr-tab-head button.active{
+    font-weight: 800 !important;
+    border-bottom: 3px solid #366d96;
+}
+
+/* .csr-tab-body .csr-tab-content-head{
+    border: 1.5px solid #000;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    position: relative;
+}
+.csr-tab-body .csr-tab-content-head p{
+    margin: 0;
+    font-size: calc(0.55rem + 0.5vw);
+}
+.csr-tab-body .csr-tab-content-head .colon{
+    background-color: #fff;
+    padding: 0.8rem;
+    position: absolute;
+}
+.csr-tab-body .csr-tab-content-head img{
+    width: 20px;
+}
+.csr-tab-body .csr-tab-content-head #colon-1{
+    top: -20px;
+    left: -20px;
+}
+.csr-tab-body .csr-tab-content-head #colon-2{
+    bottom: -18px;
+    right: -20px;
+} */
+
+.csr-tab-body .csr-card-row{
+    margin-top: 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+}
+.csr-tab-body .csr-card{
+    width: 31.6%;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.csr-tab-body .csr-card:hover{
+    background-color: #efefef;
+}
+.csr-tab-body .csr-card{
+    position: relative;
+}
+.csr-tab-body .csr-card img{
+    width: 100%;
+}
+.csr-tab-body .csr-card .arrow-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #356d97;
+    width: 40px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.csr-tab-body .csr-card .arrow-box img{
+    width: 16px;
+}
+.csr-tab-body .csr-card:hover .arrow-box{
+    display: flex;
+}
+.csr-tab-body .csr-card h3{
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: calc(0.6rem + 0.5vw);
+    font-weight: 650;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+}
+.csr-tab-body .csr-card h3 span{
+    display: none;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .csr-tabs .csr-tab-head{
+        border-bottom: 1.3px solid #bebebe;
+    }
+    .csr-tabs .csr-tab-head button{
+        border-bottom: 3.5px solid transparent;
+        margin-right: 1.3rem;
+        font-size: calc(0.7rem + 0.5vw);
+    }
+    .csr-tabs .csr-tab-head button.active{
+        border-bottom: 3.5px solid #366d96;
+    }
+
+    /* .csr-tab-body .csr-tab-content-head{
+        border: 1.7px solid #000;
+        padding: 1.5rem 3.5rem;
+        margin-top: 2.3rem;
+    }
+    .csr-tab-body .csr-tab-content-head p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .csr-tab-body .csr-tab-content-head .colon{
+        padding: 1rem;
+    }
+    .csr-tab-body .csr-tab-content-head img{
+        width: 24px;
+    }
+    .csr-tab-body .csr-tab-content-head #colon-1{
+        top: -20px;
+        left: -28px;
+    }
+    .csr-tab-body .csr-tab-content-head #colon-2{
+        bottom: -18px;
+        right: -28px;
+    } */
+
+    .csr-tab-body .csr-card-row{
+        margin-top: 1.9rem;
+    }
+    .csr-tab-body .csr-card .arrow-box{
+        width: 45px;
+        height: 45px;
+    }
+    .csr-tab-body .csr-card .arrow-box img{
+        width: 18px;
+    }
+    .csr-tab-body .csr-card h3{
+        margin-top: 1.2rem;
+        margin-bottom: 1.3rem;
+        font-size: calc(0.7rem + 0.5vw);
+        padding: 0 0.6rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .csr-tabs .csr-tab-head{
+        border-bottom: 1.5px solid #bebebe;
+    }
+    .csr-tabs .csr-tab-head button{
+        border-bottom: 3.9px solid transparent;
+        margin-right: 1.8rem;
+        font-size: calc(0.75rem + 0.5vw);
+    }
+    .csr-tabs .csr-tab-head button.active{
+        border-bottom: 3.9px solid #366d96;
+    }
+
+    /* .csr-tab-body .csr-tab-content-head{
+        border: 1.8px solid #000;
+        padding: 1.8rem 3.5rem;
+        margin-top: 2.5rem;
+    }
+    .csr-tab-body .csr-tab-content-head p{
+        font-size: calc(0.68rem + 0.5vw);
+    }
+    .csr-tab-body .csr-tab-content-head .colon{
+        padding: 1.2rem;
+    }
+    .csr-tab-body .csr-tab-content-head img{
+        width: 26px;
+    }
+    .csr-tab-body .csr-tab-content-head #colon-1{
+        top: -22px;
+        left: -32px;
+    }
+    .csr-tab-body .csr-tab-content-head #colon-2{
+        bottom: -20px;
+        right: -32px;
+    } */
+
+    .csr-tab-body .csr-card-row{
+        margin-top: 2.2rem;
+    }
+    .csr-tab-body .csr-card .arrow-box{
+        width: 48px;
+        height: 48px;
+    }
+    .csr-tab-body .csr-card .arrow-box img{
+        width: 20px;
+    }
+    .csr-tab-body .csr-card h3{
+        margin-top: 1.3rem;
+        margin-bottom: 1.4rem;
+        font-size: calc(0.77rem + 0.5vw);
+        padding: 0 0.65rem;
+    }
+}
+/* CSR Tabs End */
+
+/* Modal Start */
+#tabModal #tabModalLabel{
+    font-weight: 650;
+    font-size: calc(1.1rem + 0.5vw) !important;
+}
+#tabModal .modal-body{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+#tabModal .modal-body .modal-image-slider{
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 3rem;
+}
+#tabModal .modal-body .modal-image-slider img{
+    width: 100%;
+    margin-top: 6px;
+}
+#tabModal .modal-body .modal-text-content{
+    width: 52%;
+}
+#tabModal .modal-body .modal-text-content p{
+    font-size: calc(0.55rem + 0.5vw);
+    margin: 0;
+    color: #000;
+    font-weight: 450;
+}
+#tabModal .modal-dialog {
+    max-width: 70%; /* Default width for modal */
+}
+
+.modal-image-slider .swiper-button-next::after,
+.modal-image-slider .swiper-button-prev::after{
+    display: none;
+}
+.modal-image-slider .swiper-button-prev,
+.modal-image-slider .swiper-button-next {
+    position: absolute;
+    top: 97%;
+    width: 25px;
+    height: 25px;
+    font-size: 1.5rem;
+    background-color: #366d96;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+.modal-image-slider .swiper-button-prev span,
+.modal-image-slider .swiper-button-next span{
+    margin-top: -3px;
+    user-select: none;
+}
+.modal-image-slider .swiper-pagination-bullet {
+    width: 30px;
+    height: 5px;
+    background-color: #858585;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.1s ease;
+}
+.modal-image-slider .swiper-pagination-bullet-active {
+    background-color: #366d96;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    #tabModal .modal-body .modal-text-content p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .modal-image-slider .swiper-button-prev,
+    .modal-image-slider .swiper-button-next {
+        top: 97.2%;
+        width: 27px;
+        height: 27px;
+        font-size: 1.6rem;
+    }
+    .modal-image-slider .swiper-pagination-bullet {
+        width: 40px;
+        height: 5px;
+        margin: 0 13px;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    #tabModal #tabModalLabel{
+        font-size: calc(1.2rem + 0.5vw) !important;
+    }
+    #tabModal .modal-body .modal-text-content p{
+        font-size: calc(0.68rem + 0.5vw);
+    }
+    .modal-image-slider .swiper-button-prev,
+    .modal-image-slider .swiper-button-next {
+        top: 97.7%;
+        width: 29px;
+        height: 29px;
+        font-size: 1.7rem;
+    }
+    .modal-image-slider .swiper-pagination-bullet {
+        width: 45px;
+        height: 6px;
+        margin: 0 16px;
+    }
+}
+/* Modal End */
+
+/* Footer Start */
+footer{
+    margin-top: 2rem;
+}
+/* Footer End */
