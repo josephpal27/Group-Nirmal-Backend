@@ -110,7 +110,7 @@ $total = mysqli_num_rows($careers);
     <section class="banner">
         <img src="assets/images/career_banner.png" alt="banner">
         <div class="banner-content">
-            <h1 data-aos="fade-up" data-aos-duration="1000">Careers</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">CAREERS</h1>
         </div>
     </section> 
     <!-- Banner End -->

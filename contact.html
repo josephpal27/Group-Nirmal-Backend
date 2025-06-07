@@ -135,6 +135,7 @@
                         <label for="msg">Message</label>
                     </div>
                     <button type="submit">REQUEST</button>
+                    <div id="formResponse" style="margin-top: 1rem; font-weight: bold;"></div>
                 </form>
             </div>
         </div>
@@ -339,6 +340,34 @@
 
     <!-- JS Link -->
     <script src="assets/js/script.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Stop default submission
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const responseBox = document.getElementById('formResponse');
+
+            fetch('submit-contact.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        responseBox.style.color = 'green';
+                        form.reset(); // clear form
+                    } else {
+                        responseBox.style.color = 'red';
+                    }
+                    responseBox.innerText = data.message;
+                })
+                .catch(() => {
+                    responseBox.style.color = 'red';
+                    responseBox.innerText = 'Something went wrong.';
+                });
+        });
+    </script>
 
 </body>
 

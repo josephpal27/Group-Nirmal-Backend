@@ -1,22 +1,38 @@
 <?php
 include 'db.php';
 
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-  echo "<h3>Invalid or missing job ID.</h3>";
-  exit();
+if (isset($_GET['title'])) {
+    $slug = mysqli_real_escape_string($conn, $_GET['title']);
+    $jobQuery = "SELECT * FROM careers WHERE slug = '$slug' LIMIT 1";
+} elseif (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = (int)$_GET['id'];
+    // Optional: Redirect from ?id=... to ?title=...
+    $res = mysqli_query($conn, "SELECT slug FROM careers WHERE id = $id LIMIT 1");
+    $row = mysqli_fetch_assoc($res);
+    if ($row && !empty($row['slug'])) {
+        header("Location: view-career.php?title=" . urlencode($row['slug']));
+        exit();
+    } else {
+        echo "<h3>Career not found.</h3>";
+        exit();
+    }
+} else {
+    echo "<h3>Invalid or missing career identifier.</h3>";
+    exit();
 }
 
-$id = (int)$_GET['id'];
-$jobQuery = "SELECT * FROM careers WHERE id = $id";
 $jobResult = mysqli_query($conn, $jobQuery);
 
 if (!$jobResult || mysqli_num_rows($jobResult) === 0) {
-  echo "<h3>Career not found.</h3>";
-  exit();
+    echo "<h3>Career not found.</h3>";
+    exit();
 }
+
 $job = mysqli_fetch_assoc($jobResult);
 
-$otherJobsQuery = "SELECT * FROM careers WHERE id != $id ORDER BY created_at DESC LIMIT 4";
+// Fetch other jobs
+$jobId = (int)$job['id'];
+$otherJobsQuery = "SELECT * FROM careers WHERE id != $jobId ORDER BY created_at DESC LIMIT 4";
 $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
 ?>
 
@@ -45,7 +61,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
     <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/career2.css">
+    <link rel="stylesheet" href="assets/css/career2.css">
 </head>
 
 <body>
@@ -73,7 +89,6 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                 <a href="https://x.com/NirmalWires" target="_blank"><img src="assets/images/svg/twitter.svg" alt="twitter"></a>
                 <a href="download.html"><img src="assets/images/svg/download.svg" alt="download"></a>
             </div>
-            <a href="contact.html"><button>GET IN TOUCH</button></a>
         </div>
         <!-- Menu List -->
         <div class="nav-menu">
@@ -105,7 +120,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                 <img src="assets/images/menu-icon/menu-icon-10.png" alt="icon">
                 <span>CSR</span>
             </a>
-             <a href="career.php" class="menu">
+            <a href="career.php" class="menu">
                 <img src="assets/images/menu-icon/menu-icon-07.png" alt="icon">
                 <span>Careers</span>
             </a>
@@ -125,128 +140,128 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
     <section class="banner">
         <img src="assets/images/career_banner.png" alt="banner">
         <div class="banner-content">
-            <h1 data-aos="fade-up" data-aos-duration="1000">Careers</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000">CAREERS</h1>
         </div>
-    </section> 
+    </section>
     <!-- Banner End -->
-<!-- Career Start -->
-<!-- Main Section -->
-<div class="job-page-container">
-  <a href="careers.php" class="back-link">← Back to Other Positions</a>
+    <!-- Career Start -->
+    <!-- Main Section -->
+    <div class="job-page-container">
+        <a href="careers.php" class="back-link">← Back to Other Positions</a>
 
-  <div class="job-main-section">
-    <!-- Job Description -->
-   <div class="job-description-card">
-  <div class="job-tags">
-    <div class="job-tags-left">
-      <span>Full Time</span>
-      <span>On Site</span>
+        <div class="job-main-section">
+            <!-- Job Description -->
+            <div class="job-description-card">
+                <div class="job-tags">
+                    <div class="job-tags-left">
+                        <span>Full Time</span>
+                        <span>On Site</span>
+                    </div>
+                    <span class="job-tags-right">Posted on <?= date('M Y', strtotime($job['created_at'])) ?></span>
+                </div>
+
+                <h2 class="job-title"><?= htmlspecialchars($job['designation']) ?></h2>
+                <div class="job-subtitle"><?= $job['job_description'] ?></div>
+
+                <hr class="divider">
+
+                <h4 class="job-section-title">Roles & Responsibilities</h4>
+                <div class="job-body"><?= $job['roles_responsibilities'] ?></div>
+
+                <h4 class="job-section-title">Qualifications & Skills</h4>
+                <div class="job-body"><?= $job['qualifications_skills'] ?></div>
+
+                <h4 class="job-section-title">Experience</h4>
+                <p class="job-body"><?= htmlspecialchars($job['experience']) ?> years</p>
+
+                <h4 class="job-section-title">Location</h4>
+                <p class="job-body"><?= htmlspecialchars($job['location']) ?></p>
+
+
+            </div>
+
+
+            <!-- Apply Card -->
+            <div class="apply-card">
+                <div class="apply-icon">
+                    <img src="./assets/images/16249207.png" alt="Apply Icon" />
+                </div>
+                <div class="apply-text">
+                    <h3>Apply for this job</h3>
+                    <p>Submit your application and resume now.</p>
+                    <button class="apply-btn" onclick="openForm(<?= $job['id'] ?>)">Apply Now</button>
+                </div>
+            </div>
+
+
+            <!-- Popup Overlay -->
+            <div id="popupOverlay" class="popup-overlay"></div>
+
+            <!-- Popup Form -->
+            <div class="popup-form" id="popupForm" tabindex="0">
+                <span class="close-btn" onclick="closeForm()" aria-label="Close popup">&times;</span>
+                <h2>Job Application Form</h2>
+                <form enctype="multipart/form-data" method="POST" action="submit-application.php">
+                    <input type="hidden" name="career_id" value="<?= $job['id'] ?>">
+                    <div class="form-row">
+                        <label>First Name *<input type="text" name="first_name" required /></label>
+                        <label>Last Name *<input type="text" name="last_name" required /></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Phone Number *<input type="tel" name="phone" required /></label>
+                        <label>Current Organization *<input type="text" name="organization" required /></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Current Industry *<input type="text" name="industry" required /></label>
+                        <label>Experience *<input type="text" name="experience" required /></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Current CTC *<input type="text" name="current_ctc" required /></label>
+                        <label>Expected CTC *<input type="text" name="expected_ctc" required /></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Notice Period *<input type="text" name="notice_period" required /></label>
+                        <label>Upload Resume *<input type="file" name="resume" accept=".pdf" required /></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Upload</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Other Jobs -->
+        <h3 class="section-heading">Other Positions</h3>
+        <div class="other-positions">
+            <?php
+            include 'db.php';
+
+            // Fetch exactly 2 jobs from the database
+            $query = "SELECT id, designation, job_description FROM careers ORDER BY created_at DESC LIMIT 2";
+            $result = mysqli_query($conn, $query);
+
+            while ($row = mysqli_fetch_assoc($result)):
+            ?>
+                <div class="job-card">
+                    <h4><?= htmlspecialchars($row['designation']) ?></h4>
+                    <p><?= htmlspecialchars(mb_strimwidth($row['job_description'], 0, 100, '...')) ?></p>
+
+                    <div class="job-divider"></div>
+
+                    <div class="job-meta-apply">
+                        <div class="job-meta">
+                            <span>Full Time</span> | <span>On Site</span>
+                        </div>
+                        <a href="view-career.php?id=<?= $row['id'] ?>" class="text-link">Apply now</a>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+
+        <div class="browse-all">
+            <a href="career.php"><button class="browse-btn">Browse all Job Positions</button></a>
+        </div>
     </div>
-    <span class="job-tags-right">Posted on <?= date('M Y', strtotime($job['created_at'])) ?></span>
-  </div>
 
-  <h2 class="job-title"><?= htmlspecialchars($job['designation']) ?></h2>
-  <div class="job-subtitle"><?= $job['job_description'] ?></div>
-
-  <hr class="divider">
-
-  <h4 class="job-section-title">Roles & Responsibilities</h4>
-  <div class="job-body"><?= $job['roles_responsibilities'] ?></div>
-
-  <h4 class="job-section-title">Qualifications & Skills</h4>
-  <div class="job-body"><?= $job['qualifications_skills'] ?></div>
-
-  <h4 class="job-section-title">Experience</h4>
-  <p class="job-body"><?= htmlspecialchars($job['experience']) ?> years</p>
-
-  <h4 class="job-section-title">Location</h4>
-  <p class="job-body"><?= htmlspecialchars($job['location']) ?></p>
-
-
-</div>
-
-
-    <!-- Apply Card -->
-   <div class="apply-card">
-  <div class="apply-icon">
-    <img src="./assets/images/16249207.png" alt="Apply Icon" />
-  </div>
-  <div class="apply-text">
-    <h3>Apply for this job</h3>
-    <p>Submit your application and resume now.</p>
-    <button class="apply-btn" onclick="openForm(<?= $job['id'] ?>)">Apply Now</button>
-  </div>
-</div>
-
-
-    <!-- Popup Overlay -->
-    <div id="popupOverlay" class="popup-overlay"></div>
-
-    <!-- Popup Form -->
-    <div class="popup-form" id="popupForm" tabindex="0">
-      <span class="close-btn" onclick="closeForm()" aria-label="Close popup">&times;</span>
-      <h2>Job Application Form</h2>
-      <form enctype="multipart/form-data" method="POST" action="submit-application.php">
-        <input type="hidden" name="career_id" value="<?= $job['id'] ?>">
-        <div class="form-row">
-          <label>First Name *<input type="text" name="first_name" required /></label>
-          <label>Last Name *<input type="text" name="last_name" required /></label>
-        </div>
-        <div class="form-row">
-          <label>Phone Number *<input type="tel" name="phone" required /></label>
-          <label>Current Organization *<input type="text" name="organization" required /></label>
-        </div>
-        <div class="form-row">
-          <label>Current Industry *<input type="text" name="industry" required /></label>
-          <label>Experience *<input type="text" name="experience" required /></label>
-        </div>
-        <div class="form-row">
-          <label>Current CTC *<input type="text" name="current_ctc" required /></label>
-          <label>Expected CTC *<input type="text" name="expected_ctc" required /></label>
-        </div>
-        <div class="form-row">
-          <label>Notice Period *<input type="text" name="notice_period" required /></label>
-          <label>Upload Resume *<input type="file" name="resume" accept=".pdf" required /></label>
-        </div>
-        <button type="submit" class="submit-btn">Upload</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Other Jobs -->
-  <h3 class="section-heading">Other Positions</h3>
- <div class="other-positions">
-  <?php
-  include 'db.php';
-
-  // Fetch exactly 2 jobs from the database
-  $query = "SELECT id, designation, job_description FROM careers ORDER BY created_at DESC LIMIT 2";
-  $result = mysqli_query($conn, $query);
-
-  while ($row = mysqli_fetch_assoc($result)):
-  ?>
-    <div class="job-card">
-      <h4><?= htmlspecialchars($row['designation']) ?></h4>
-      <p><?= htmlspecialchars(mb_strimwidth($row['job_description'], 0, 100, '...')) ?></p>
-
-      <div class="job-divider"></div>
-
-      <div class="job-meta-apply">
-        <div class="job-meta">
-          <span>Full Time</span> | <span>On Site</span>
-        </div>
-        <a href="view-career.php?id=<?= $row['id'] ?>" class="text-link">Apply now</a>
-      </div>
-    </div>
-  <?php endwhile; ?>
-</div>
-
-  <div class="browse-all">
-    <a href="career.php"><button class="browse-btn">Browse all Job Positions</button></a>
-  </div>
-</div>
-
-     <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer class="px-md-5 pt-5">
         <div class="container-fluid">
             <div class="row">
@@ -267,9 +282,9 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 mt-4 mt-sm-0">
-                                <div class="footer-imnner" style="margin-bottom: 2.1rem;">
-                                    <!-- <h5 class="text1"><a href="retail.html" class="text-decoration-none">RETAIL</a></h5> -->
-                                </div>
+                            <div class="footer-imnner" style="margin-bottom: 2.1rem;">
+                                <!-- <h5 class="text1"><a href="retail.html" class="text-decoration-none">RETAIL</a></h5> -->
+                            </div>
                             <div>
                                 <ul class="list-unstyled">
                                     <li><a href="trading.html" class="text-decoration-none">Trading</a></li>
@@ -292,7 +307,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 d-none d-xl-block text-end" >
+                <div class="col-xl-3 d-none d-xl-block text-end">
                     <h5 class="mb-3">Toll Free No. 1800 309 3876</h5>
                     <div class="social text-end position-relative d-none d-md-block mb-4">
                         <ul class="list-unstyled d-inline-flex mb-0">
@@ -327,14 +342,14 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                 </div>
             </div>
         </div>
-    </footer> 
+    </footer>
     <!-- Footer End -->
- <!-- WhatsApp Icon Start -->
+    <!-- WhatsApp Icon Start -->
     <section class="wp">
         <a href="https://wa.me/18003093876" target="_blank">
             <img src="assets/images/svg/whatsapp.svg" alt="WhatsApp">
         </a>
-    </section> 
+    </section>
     <!-- WhatsApp Icon End -->
 
 
@@ -355,6 +370,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
             duration: 0.5, // Adjust the duration for smooth scrolling
             easing: (t) => t * (2 - t),
         });
+
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
@@ -384,47 +400,48 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
 
     <!-- JS Link -->
     <script src="assets/js/script.js"></script>
-<!-- JS for popup -->
-<script>
-  const popupForm = document.getElementById('popupForm');
-  const popupOverlay = document.getElementById('popupOverlay');
-  let scrollPosition = 0;
+    <!-- JS for popup -->
+    <script>
+        const popupForm = document.getElementById('popupForm');
+        const popupOverlay = document.getElementById('popupOverlay');
+        let scrollPosition = 0;
 
-  function openForm() {
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    popupForm.style.display = 'block';
-    popupOverlay.style.display = 'block';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    popupForm.focus();
-  }
+        function openForm() {
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            popupForm.style.display = 'block';
+            popupOverlay.style.display = 'block';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            popupForm.focus();
+        }
 
-  function closeForm() {
-    popupForm.style.display = 'none';
-    popupOverlay.style.display = 'none';
-    document.body.style.position = '';
-    document.body.style.top = '';
-    window.scrollTo(0, scrollPosition);
-  }
+        function closeForm() {
+            popupForm.style.display = 'none';
+            popupOverlay.style.display = 'none';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            window.scrollTo(0, scrollPosition);
+        }
 
-  popupOverlay.addEventListener('click', closeForm);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && popupForm.style.display === 'block') {
-      closeForm();
-    }
-  });
-  function openForm(jobId) {
-  document.getElementById("popupOverlay").style.display = "block";
-  document.getElementById("popupForm").style.display = "block";
-  document.getElementById("careerIdInput").value = jobId;
-}
+        popupOverlay.addEventListener('click', closeForm);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popupForm.style.display === 'block') {
+                closeForm();
+            }
+        });
 
-function closeForm() {
-  document.getElementById("popupOverlay").style.display = "none";
-  document.getElementById("popupForm").style.display = "none";
-}
+        function openForm(jobId) {
+            document.getElementById("popupOverlay").style.display = "block";
+            document.getElementById("popupForm").style.display = "block";
+            document.getElementById("careerIdInput").value = jobId;
+        }
 
-</script>
+        function closeForm() {
+            document.getElementById("popupOverlay").style.display = "none";
+            document.getElementById("popupForm").style.display = "none";
+        }
+    </script>
 
 </body>
+
 </html>

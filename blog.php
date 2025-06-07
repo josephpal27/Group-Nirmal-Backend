@@ -1,24 +1,34 @@
 <?php
 include 'db.php';
 
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-  echo "Invalid blog ID.";
-  exit;
-}
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = (int)$_GET['id'];
+    $result = mysqli_query($conn, "SELECT slug FROM blogs WHERE id = $id LIMIT 1");
+    $blog = mysqli_fetch_assoc($result);
 
-$id = intval($_GET['id']);
-$query = "SELECT blogs.*, blog_categories.name AS category 
-          FROM blogs 
-          LEFT JOIN blog_categories ON blogs.category_id = blog_categories.id 
-          WHERE blogs.id = $id";
-$result = mysqli_query($conn, $query);
-$blog = mysqli_fetch_assoc($result);
+    if ($blog && !empty($blog['slug'])) {
+        // Redirect to title-based URL
+        header("Location: blog.php?title=" . urlencode($blog['slug']));
+        exit;
+    } else {
+        echo "Blog not found.";
+        exit;
+    }
+} elseif (isset($_GET['title'])) {
+    $slug = mysqli_real_escape_string($conn, $_GET['title']);
+    $result = mysqli_query($conn, "SELECT * FROM blogs WHERE slug = '$slug' LIMIT 1");
+    $blog = mysqli_fetch_assoc($result);
 
-if (!$blog) {
-  echo "Blog not found.";
-  exit;
+    if (!$blog) {
+        echo "Blog not found.";
+        exit;
+    }
+} else {
+    echo "No blog specified.";
+    exit;
 }
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -73,7 +83,6 @@ if (!$blog) {
                 <a href="https://x.com/NirmalWires" target="_blank"><img src="assets/images/svg/twitter.svg" alt="twitter"></a>
                 <a href="download.html"><img src="assets/images/svg/download.svg" alt="download"></a>
             </div>
-            <a href="contact.html"><button>GET IN TOUCH</button></a>
         </div>
         <!-- Menu List -->
         <div class="nav-menu">
@@ -120,43 +129,43 @@ if (!$blog) {
         </div>
     </nav>
     <!-- Navbar End -->
-<!-- Banner Start -->
-<section class="banner">
-  <img src="uploads/blogs/<?= htmlspecialchars($blog['image']) ?>" alt="banner">
-</section>
-<!-- Banner End -->
+    <!-- Banner Start -->
+    <section class="banner">
+        <img src="uploads/blogs/<?= htmlspecialchars($blog['image']) ?>" alt="banner">
+    </section>
+    <!-- Banner End -->
 
-<!-- Blog Content Start -->
-<section class="blog-content">
-  <h2 data-aos="fade" data-aos-duration="1000"><?= htmlspecialchars($blog['title']) ?></h2>
+    <!-- Blog Content Start -->
+    <section class="blog-content">
+        <h2 data-aos="fade" data-aos-duration="1000"><?= htmlspecialchars($blog['title']) ?></h2>
 
-  <?php
-  // Convert content into paragraphs and auto-format it
-  $content = nl2br($blog['content']);
-  $lines = explode('<br />', $content);
-  foreach ($lines as $line) {
-    $line = trim($line);
-    if (strlen($line) > 0) {
-      // Optional: Detect H3 with markdown-style ## or use a field in DB if you separate headings
-      if (str_starts_with($line, '##')) {
-        echo '<h3 data-aos="fade" data-aos-duration="1000">' . htmlspecialchars(ltrim($line, '# ')) . '</h3>';
-      } else {
-        echo '<p data-aos="fade" data-aos-duration="1000">' . $line . '</p>';
-      }
-    }
-  }
-  ?>
-</section>
-<!-- Blog Content End -->
- <!-- Social icon Start -->
+        <?php
+        // Convert content into paragraphs and auto-format it
+        $content = nl2br($blog['content']);
+        $lines = explode('<br />', $content);
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (strlen($line) > 0) {
+                // Optional: Detect H3 with markdown-style ## or use a field in DB if you separate headings
+                if (str_starts_with($line, '##')) {
+                    echo '<h3 data-aos="fade" data-aos-duration="1000">' . htmlspecialchars(ltrim($line, '# ')) . '</h3>';
+                } else {
+                    echo '<p data-aos="fade" data-aos-duration="1000">' . $line . '</p>';
+                }
+            }
+        }
+        ?>
+    </section>
+    <!-- Blog Content End -->
+    <!-- Social icon Start -->
     <div class="social-row" data-aos="fade" data-aos-duration="1000">
         <a href="https://www.facebook.com/groupnirmal?mibextid=ZbWKwL" target="_blank"><img src="assets/images/svg/facebook.svg" alt="facebook"></a>
         <a href="https://www.instagram.com/group.nirmal?igsh=MWFxZ3BqZzgzamhibg==" target="_blank"><img src="assets/images/svg/instagram.svg" alt="instagram"></a>
         <a href="https://www.linkedin.com/company/nirmal-wires-private-limited/" target="_blank"><img src="assets/images/svg/linkedin.svg" alt="linkedin"></a>
-    </div> 
+    </div>
     <!-- Social icon End -->
 
-     <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer class="px-md-5 pt-5">
         <div class="container-fluid">
             <div class="row">
@@ -177,9 +186,9 @@ if (!$blog) {
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 mt-4 mt-sm-0">
-                                <div class="footer-imnner" style="margin-bottom: 2.1rem;">
-                                    <!-- <h5 class="text1"><a href="retail.html" class="text-decoration-none">RETAIL</a></h5> -->
-                                </div>
+                            <div class="footer-imnner" style="margin-bottom: 2.1rem;">
+                                <!-- <h5 class="text1"><a href="retail.html" class="text-decoration-none">RETAIL</a></h5> -->
+                            </div>
                             <div>
                                 <ul class="list-unstyled">
                                     <li><a href="trading.html" class="text-decoration-none">Trading</a></li>
@@ -202,7 +211,7 @@ if (!$blog) {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 d-none d-xl-block text-end" >
+                <div class="col-xl-3 d-none d-xl-block text-end">
                     <h5 class="mb-3">Toll Free No. 1800 309 3876</h5>
                     <div class="social text-end position-relative d-none d-md-block mb-4">
                         <ul class="list-unstyled d-inline-flex mb-0">
@@ -237,7 +246,7 @@ if (!$blog) {
                 </div>
             </div>
         </div>
-    </footer> 
+    </footer>
     <!-- Footer End -->
 
     <!-- WhatsApp Icon Start -->
@@ -245,7 +254,7 @@ if (!$blog) {
         <a href="https://wa.me/18003093876" target="_blank">
             <img src="assets/images/svg/whatsapp.svg" alt="WhatsApp">
         </a>
-    </section> 
+    </section>
     <!-- WhatsApp Icon End -->
 
 
@@ -266,6 +275,7 @@ if (!$blog) {
             duration: 0.5, // Adjust the duration for smooth scrolling
             easing: (t) => t * (2 - t),
         });
+
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);

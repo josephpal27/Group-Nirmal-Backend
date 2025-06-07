@@ -1,26 +1,29 @@
 <?php
-include 'db.php'; // Make sure you are connecting to the DB
+include 'db.php';
+header('Content-Type: application/json'); // Return JSON for AJAX
 
-// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Sanitize and retrieve form data
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $subject = mysqli_real_escape_string($conn, $_POST['subject']);
-    $message = mysqli_real_escape_string($conn, $_POST['message']);
-
-    // Insert into the database
-    $query = "INSERT INTO contact_form (name, email, subject, message) 
-              VALUES ('$name', '$email', '$subject', '$message')";
-
-    if (mysqli_query($conn, $query)) {
-        // Redirect after success (can also show a thank-you message)
-        header("Location: index.html");
+    if (!$conn) {
+        echo json_encode(["status" => "error", "message" => "DB connection failed"]);
         exit;
-    } else {
-        echo "Error saving your message.";
     }
+
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $subject = trim($_POST['subject']);
+    $message = trim($_POST['message']);
+
+    $stmt = $conn->prepare("INSERT INTO contact_form (name, email, subject, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+    if ($stmt->execute()) {
+        echo json_encode(["status" => "success", "message" => "Thank you! We'll contact you soon."]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Error saving data."]);
+    }
+
+    $stmt->close();
+    $conn->close();
 } else {
-    echo "Invalid request.";
+    echo json_encode(["status" => "error", "message" => "Invalid request"]);
 }
-?>

@@ -183,16 +183,18 @@
   max-width: 48%;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.553) 0px 3px 8px;
   padding: 2rem !important;
   min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease;
 }
 
 .job-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: rgba(0, 0, 0, 0.704) 0px 3px 8px;
 }
 
 .job-card h4 {
