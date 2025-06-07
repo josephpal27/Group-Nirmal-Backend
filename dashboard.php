@@ -39,14 +39,17 @@ $page = $_GET['page'] ?? '';
       padding: 12px 20px;
       display: block;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .sidebar a:hover {
       background-color: hsl(215, 48.60%, 93.10%);
+      color: #000;
     }
 
     .sidebar .active {
       background-color: #3A739B;
+      color: #fff;
     }
 
     .submenu a {
