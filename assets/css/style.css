@@ -516,7 +516,7 @@ nav{
 
 /* Products By Industry Start */
 .industry-products{
-    padding: 4rem 7.5% 0 7.5%;
+    padding: 4rem 9% 0 9%;
 }
 .industry-products h2{
     text-align: center;
@@ -533,7 +533,7 @@ nav{
 }
 .industry-card{
     width: 32%;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.3rem;
     position: relative;
 }
 .industry-card img{
@@ -569,6 +569,26 @@ nav{
 .industry-card .industry-card-content p{
     font-size: calc(0.5rem + 0.5vw);
     margin-top: 0.5rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .industry-products{
+        padding: 4.8rem 9.7% 0 9.7%;
+    }
+    .industry-card{
+        margin-bottom: 1.4rem;
+    }
+}
+
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .industry-products{
+        padding: 5rem 8% 0 8%;
+    }
+    .industry-card{
+        margin-bottom: 1.55rem;
+    }
 }
 /* Products By Industry End */
 
