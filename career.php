@@ -82,7 +82,7 @@ $total = mysqli_num_rows($careers);
                 <img src="assets/images/menu-icon/menu-icon-11.png" alt="icon">
                 <span>Trading</span>
             </a>
-            <a href=our-presence.html" class="menu">
+            <a href="our-presence.html" class="menu">
                 <img src="assets/images/menu-icon/menu-icon-06.png" alt="icon">
                 <span>Our Presence</span>
             </a>
@@ -108,7 +108,7 @@ $total = mysqli_num_rows($careers);
 
     <!-- Banner Start -->
     <section class="banner">
-        <img src="assets/images/career_banner.png" alt="banner">
+        <img src="assets/images/career-banner.webp" alt="banner">
         <div class="banner-content">
             <h1 data-aos="fade-up" data-aos-duration="1000">CAREERS</h1>
         </div>

@@ -61,12 +61,14 @@
 .products .tab-content .card .card-img:hover {
     scale: 1.1;
 }
-.products .tab-content .card .card-body h3 {
+.products .tab-content .card .card-body span {
     color: #194b71;
     font-weight: 500;
     margin-bottom: 1.5rem;
     font-size: calc(0.55rem + 0.5vw);
     cursor: pointer;
+    display: block;
+    line-height: normal;
 }
 .products .tab-content .card .card-footer .btn {
     background-color: #194b71;
@@ -105,7 +107,7 @@
         margin-bottom: 0.25rem;
         font-size: calc(0.65rem + 0.5vw);
     }
-    .products .tab-content .card .card-body h3 {
+    .products .tab-content .card .card-body span {
         font-size: calc(0.65rem + 0.5vw);
     }
 }

@@ -279,7 +279,7 @@ nav{
 .about-us .count-row .count-box img{
     width: 40px;
 }
-.about-us .count-row .count-box h2{
+.about-us .count-row .count-box span{
     margin-top: 0.7rem;
     font-weight: 700;
     font-size: calc(1.6rem + 0.5vw);
@@ -314,7 +314,7 @@ nav{
     .about-us .count-row .count-box img{
         width: 45px;
     }
-    .about-us .count-row .count-box h2{
+    .about-us .count-row .count-box span{
         font-size: calc(1.8rem + 0.5vw);
         margin-bottom: 0.25rem;
     }
@@ -340,7 +340,6 @@ nav{
 }
 .chairman-content .chairman-image img{
     width: 100%;
-    /* border: 0.4rem solid #fff; */
 }
 .chairman-content .chairman-desc{
     width: 59%;
@@ -352,7 +351,7 @@ nav{
 .chairman-content .chairman-desc img{
     width: 25px;
 }
-.chairman-content .chairman-desc h1{
+.chairman-content .chairman-desc h2{
     font-weight: 600;
     text-transform: uppercase;
     font-size: calc(1.8rem + 0.5vw);
@@ -370,7 +369,6 @@ nav{
 
 @media screen and (max-width: 1229px){
     .chairman-content{
-        /* padding: 3rem 5.2%; */
         padding: 0 5.2%;
     }
 }
@@ -380,7 +378,7 @@ nav{
     .chairman-content{
         padding: 0 0;
     }
-    .chairman-content .chairman-desc h1{
+    .chairman-content .chairman-desc h2{
         font-size: calc(1.9rem + 0.5vw);
         margin-top: 0.85rem;
     }
@@ -402,7 +400,7 @@ nav{
     .chairman-content{
         padding: 0 1.5% 0 1.5%;
     }
-     .chairman-content .chairman-desc h1{
+     .chairman-content .chairman-desc h2{
         font-size: calc(2rem + 0.5vw);
         margin-top: 0.9rem;
     }
@@ -425,7 +423,7 @@ nav{
     background-position: center;
     padding: 4rem 7.5%;
 }
-.product-details h1{
+.product-details h3{
     text-align: center;
     font-weight: 650;
     font-size: calc(1.1rem + 1vw);
@@ -448,12 +446,14 @@ nav{
 .product-cards-row .product-card img{
     width: 100%;
 }
-.product-cards-row .product-card h2{
+.product-cards-row .product-card span{
     font-size: calc(0.6rem + 0.5vw);
     font-weight: 600;
     text-align: center;
+    display: block;
+    margin-bottom: 0.4rem;
 }
-.product-cards-row .product-card .layer-2 h2{
+.product-cards-row .product-card .layer-2 span{
     text-align: start;
 }
 .product-cards-row .product-card p{
@@ -504,7 +504,7 @@ nav{
     .product-details{
         padding: 5rem 7%;
     }
-    .product-cards-row .product-card h2{
+    .product-cards-row .product-card span{
         font-size: calc(0.75rem + 0.5vw);
     }
     .product-cards-row .product-card p{
@@ -518,7 +518,7 @@ nav{
 .industry-products{
     padding: 4rem 9% 0 9%;
 }
-.industry-products h2{
+.industry-products h4{
     text-align: center;
     font-weight: 650;
     font-size: calc(1.1rem + 1vw);
@@ -561,7 +561,7 @@ nav{
     flex-direction: column;
     justify-content: flex-end;
 }
-.industry-card .industry-card-content h3{
+.industry-card .industry-card-content span{
     font-weight: 600;
     text-transform: uppercase;
     font-size: calc(0.7rem + 1vw);
@@ -596,7 +596,7 @@ nav{
 .media{
     padding: 3rem 5.6% 4rem 5.6%;
 }
-.media h1{
+.media h5{
     text-align: center;
     font-weight: 650;
     font-size: calc(1.1rem + 1vw);
@@ -663,7 +663,7 @@ nav{
 .media-boxes .media-center .center-box-right{
     width: 49%;
 }
-.media-boxes h2{
+.media-boxes h6{
     font-size: calc(0.5rem + 0.5vw);
 }
 .media-boxes p{
@@ -684,7 +684,7 @@ nav{
 .media-boxes button:hover{
     background-color: #22567e;
 }
-.media-boxes .media-aside h2{
+.media-boxes .media-aside h6{
     margin-top: 1rem;
 }
 
@@ -747,7 +747,7 @@ nav{
     justify-content: center;
     color: #fff;
 }
-.contact-us .contact-us-content h1{
+.contact-us .contact-us-content h6{
     text-transform: uppercase;
     font-size: calc(1.7rem + 0.5vw);
     font-weight: 600;
@@ -776,7 +776,7 @@ nav{
     .contact-us .contact-us-content{
         padding: 4.5rem 1.2rem 4rem 1.2rem;
     }
-    .contact-us .contact-us-content h1{
+    .contact-us .contact-us-content h6{
         font-size: calc(1.8rem + 0.5vw);
     }
     .contact-us .contact-us-content p{
@@ -793,7 +793,7 @@ nav{
     .contact-us .contact-us-content{
         padding: 5rem 1.5% 4.5rem 1.5%;
     }
-    .contact-us .contact-us-content h1{
+    .contact-us .contact-us-content h6{
         font-size: calc(1.9rem + 0.5vw);
     }
     .contact-us .contact-us-content p{

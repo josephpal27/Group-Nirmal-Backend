@@ -3,6 +3,12 @@
     overflow: hidden;
     position: relative;
 }
+.media h2{
+    text-align: center;
+    font-weight: 650;
+    font-size: calc(1.1rem + 1vw);
+    color: #386c94;
+}
 
 .media .swiper-button-prev,
 .media .swiper-button-next {

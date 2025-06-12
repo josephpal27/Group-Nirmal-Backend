@@ -57,7 +57,7 @@
 .contact-box-left .contact-form{
     width: 70%;
 }
-.contact-box-left .contact-form h1{
+.contact-box-left .contact-form span{
     font-size: calc(0.8rem + 1vw);
     font-weight: 650;
     color: #366d96;
@@ -152,7 +152,7 @@
     margin: 0 8%;
     padding: 0.5rem 0;
 }
-.corporate-office h1{
+.corporate-office h2{
     border-bottom: 1px solid #9d9d9d;
     font-size: calc(0.7rem + 1vw);
     font-weight: 650;
@@ -171,7 +171,7 @@
     margin-top: 0.8rem;
     padding: 1rem;
 }
-.corporate-office .corp-card h2{
+.corporate-office .corp-card h3{
     font-size: calc(0.7rem + 0.5vw);
     font-weight: 700;
 }
@@ -193,7 +193,7 @@
 .manufacturing-units{
     padding: 2.5rem 8%;
 }
-.manufacturing-units h1{
+.manufacturing-units h2{
     border-bottom: 1px solid #9d9d9d;
     font-size: calc(0.7rem + 1vw);
     font-weight: 650;
@@ -214,7 +214,7 @@
     overflow: hidden;
     margin-bottom: 1rem;
 }
-.manufacturing-card-row .manufacturing-card h2{
+.manufacturing-card-row .manufacturing-card h3{
     font-size: calc(0.7rem + 0.5vw);
     font-weight: 700;
 }
