@@ -17,6 +17,8 @@ $page = $_GET['page'] ?? '';
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to Canonical -->
+  <link rel="canonical" href="https://groupnirmal.com/dashboard.php">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {

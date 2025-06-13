@@ -50,6 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <title>Edit Blog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link to Canonical -->
+  <!-- <link rel="canonical" href="https://groupnirmal.com/edit-blog.php"> -->
   <style>
     .toolbar button, .toolbar select, .toolbar input[type="color"] {
       margin-right: 5px;

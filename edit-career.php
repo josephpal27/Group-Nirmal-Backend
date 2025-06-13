@@ -47,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <title>Edit Career</title>
+  <!-- Link to Canonical -->
+  <!-- <link rel="canonical" href="https://groupnirmal.com/edit-career.php"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .toolbar button, .toolbar select, .toolbar input[type="color"] {
