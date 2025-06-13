@@ -1,13 +1,37 @@
-RewriteEngine On
+RewriteEngine on
+
+# Redirect direct access to /assets to custom 404 page
+RewriteCond %{REQUEST_URI} ^/assets/?$
+RewriteRule ^ /404.html [R=302,L]
+
+# Error handling
+ErrorDocument 404 /404.html
+
+# Add HSTS header
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Add Content Security Policy header (single-line format)
+<IfModule mod_headers.c>
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://ajax.googleapis.com https://maps.googleapis.com https://www.google.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://cdn.jsdelivr.net https://maps.googleapis.com https://maps.gstatic.com https://www.google.com; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
+</IfModule>
 
 # Redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-# Force HTTPS
+# Force HTTP to HTTPS redirect
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect /index.html to /
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^index\.html$ https://%{HTTP_HOST}/ [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
