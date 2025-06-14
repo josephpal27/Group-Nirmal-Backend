@@ -118,7 +118,7 @@ $total = mysqli_num_rows($careers);
     <!-- Banner End -->
       <!-- Career Start -->
     <div class="jobs-container">
-  <div class="jobs-title">Open - Positions (<?= $total ?>)</div>
+  <h2 class="jobs-title">Open - Positions (<?= $total ?>)</h2>
 
   <div class="jobs-header">
     <div>Role</div>

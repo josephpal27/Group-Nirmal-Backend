@@ -140,7 +140,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                   <img src="uploads/blogs/<?php echo htmlspecialchars($blog['image']); ?>" alt="<?php echo htmlspecialchars($blog['title']); ?>">
                 </div>
                 <div class="card-body">
-                  <h3><?php echo htmlspecialchars($blog['title']); ?></h3>
+                  <h2><?php echo htmlspecialchars($blog['title']); ?></h2>
                   <p><?php echo htmlspecialchars($blog['snippet']); ?>...</p>
                   <a href="blog.php?id=<?php echo $blog['id']; ?>" class="explore-btn">
                     <button>

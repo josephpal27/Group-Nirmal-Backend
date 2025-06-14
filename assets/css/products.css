@@ -21,7 +21,8 @@
     font-weight: 600;
     font-size: calc(0.6rem + 0.5vw);
 }
-.products #ban-2 {
+.products #ban-2,
+.products #ban-3 {
     margin-top: 1.5rem;
 }
 .products .nav-pills .nav-link {
