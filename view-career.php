@@ -70,66 +70,66 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
     <nav>
         <div class="nav-left">
             <div class="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Nirmal"></a>
+                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Nirmal" loading="lazy"></a>
             </div>
             <div class="line"></div>
             <div class="group-logo">
-                <img src="assets/images/logo/group-logo.jpg" alt="Group Nirmal">
+                <img src="assets/images/logo/group-logo.jpg" alt="Group Nirmal" loading="lazy">
             </div>
             <div class="menu-btn">
-                <button><img src="assets/images/svg/menu.svg" alt="icon"> MENU</button>
+                <button><img src="assets/images/svg/menu.svg" alt="icon" loading="lazy"> MENU</button>
             </div>
         </div>
         <div class="nav-right">
             <div class="social-icons">
-                <a href="https://www.facebook.com/groupnirmal?mibextid=ZbWKwL" target="_blank"><img src="assets/images/svg/facebook.svg" alt="facebook"></a>
-                <a href="https://www.instagram.com/group.nirmal?igsh=MWFxZ3BqZzgzamhibg==" target="_blank"><img src="assets/images/svg/instagram.svg" alt="instagram"></a>
-                <a href="https://www.linkedin.com/company/nirmal-wires-private-limited/" target="_blank"><img src="assets/images/svg/linkedin.svg" alt="linkedin"></a>
-                <a href="https://youtube.com/@groupnirmal?si=vw5R2dLVZcAu8S32" target="_blank"><img src="assets/images/svg/youtube.svg" alt="youtube"></a>
-                <a href="https://x.com/NirmalWires" target="_blank"><img src="assets/images/svg/twitter.svg" alt="twitter"></a>
-                <a href="download.html"><img src="assets/images/svg/download.svg" alt="download"></a>
+                <a href="https://www.facebook.com/groupnirmal?mibextid=ZbWKwL" target="_blank"><img src="assets/images/svg/facebook.svg" alt="facebook" loading="lazy"></a>
+                <a href="https://www.instagram.com/group.nirmal?igsh=MWFxZ3BqZzgzamhibg==" target="_blank"><img src="assets/images/svg/instagram.svg" alt="instagram" loading="lazy"></a>
+                <a href="https://www.linkedin.com/company/nirmal-wires-private-limited/" target="_blank"><img src="assets/images/svg/linkedin.svg" alt="linkedin" loading="lazy"></a>
+                <a href="https://youtube.com/@groupnirmal?si=vw5R2dLVZcAu8S32" target="_blank"><img src="assets/images/svg/youtube.svg" alt="youtube" loading="lazy"></a>
+                <a href="https://x.com/NirmalWires" target="_blank"><img src="assets/images/svg/twitter.svg" alt="twitter" loading="lazy"></a>
+                <a href="download.html"><img src="assets/images/svg/download.svg" alt="download" loading="lazy"></a>
             </div>
         </div>
         <!-- Menu List -->
         <div class="nav-menu">
             <a href="index.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-01.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-01.png" alt="icon" loading="lazy">
                 <span>Home</span>
             </a>
             <a href="our-story.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-02.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-02.png" alt="icon" loading="lazy">
                 <span>Our Story</span>
             </a>
             <a href="products.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-03.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-03.png" alt="icon" loading="lazy">
                 <span>Products</span>
             </a>
             <a href="quality-assurance.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-04.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-04.png" alt="icon" loading="lazy">
                 <span>Quality Assurance</span>
             </a>
             <a href="trading.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-11.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-11.png" alt="icon" loading="lazy">
                 <span>Trading</span>
             </a>
             <a href="our-presence.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-06.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-06.png" alt="icon" loading="lazy">
                 <span>Our Presence</span>
             </a>
             <a href="csr.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-10.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-10.png" alt="icon" loading="lazy">
                 <span>CSR</span>
             </a>
             <a href="career.php" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-07.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-07.png" alt="icon" loading="lazy">
                 <span>Careers</span>
             </a>
             <a href="view-blog.php" class="menu">
-                <img src="assets/images/menu-icon/blog.png" alt="icon">
+                <img src="assets/images/menu-icon/blog.png" alt="icon" loading="lazy">
                 <span>Blog</span>
             </a>
             <a href="contact.html" class="menu">
-                <img src="assets/images/menu-icon/menu-icon-08.png" alt="icon">
+                <img src="assets/images/menu-icon/menu-icon-08.png" alt="icon" loading="lazy">
                 <span>Contact Us</span>
             </a>
         </div>
@@ -138,7 +138,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
 
     <!-- Banner Start -->
     <section class="banner">
-        <img src="assets/images/career-banner.webp" alt="banner">
+        <img src="assets/images/career-banner.webp" alt="banner" loading="lazy">
         <div class="banner-content">
             <h1 data-aos="fade-up" data-aos-duration="1000">CAREERS</h1>
         </div>
@@ -184,7 +184,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
             <!-- Apply Card -->
             <div class="apply-card">
                 <div class="apply-icon">
-                    <img src="./assets/images/16249207.png" alt="Apply Icon" />
+                    <img src="./assets/images/16249207.png" alt="Apply Icon" loading="lazy" />
                 </div>
                 <div class="apply-text">
                     <h3>Apply for this job</h3>
@@ -266,7 +266,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-3 col-md-6 mb-4 mb-md-0">
-                    <img class="img-fluid" src="assets/images/footer-logo.png" alt="Nirmal" width="170">
+                    <img class="img-fluid" src="assets/images/footer-logo.png" alt="Nirmal" width="170" loading="lazy">
                 </div>
                 <div class="col-xl-6">
                     <div class="row">
@@ -290,7 +290,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                                     <li><a href="trading.html" class="text-decoration-none">Trading</a></li>
                                     <li><a href="quality-assurance.html" class="text-decoration-none">Quality Assurance</a></li>
                                     <li><a href="view-blog.php" class="text-decoration-none">Our Blogs</a></li>
-                                    <li><a href="coming-soon.html" class="text-decoration-none">Our Gallery</a></li>
+                                    <li><a href="our-presence.html" class="text-decoration-none">Our Gallery</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -313,32 +313,32 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
                         <ul class="list-unstyled d-inline-flex mb-0">
                             <li>
                                 <a href="https://www.facebook.com/groupnirmal?mibextid=ZbWKwL" target="_blank">
-                                    <img class="img-fluid" src="assets/images/svg/facebook.svg" alt="Facebook" />
+                                    <img class="img-fluid" src="assets/images/svg/facebook.svg" alt="Facebook" loading="lazy" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/group.nirmal?igsh=MWFxZ3BqZzgzamhibg==" target="_blank">
-                                    <img class="img-fluid" src="assets/images/svg/instagram.svg" alt="Instagram" />
+                                    <img class="img-fluid" src="assets/images/svg/instagram.svg" alt="Instagram" loading="lazy" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/company/nirmal-wires-private-limited/" target="_blank">
-                                    <img class="img-fluid" src="assets/images/svg/linkedin.svg" alt="Linkedin" />
+                                    <img class="img-fluid" src="assets/images/svg/linkedin.svg" alt="Linkedin" loading="lazy" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://youtube.com/@groupnirmal?si=vw5R2dLVZcAu8S32" target="_blank">
-                                    <img class="img-fluid" src="assets/images/svg/youtube.svg" alt="Youtube" />
+                                    <img class="img-fluid" src="assets/images/svg/youtube.svg" alt="Youtube" loading="lazy" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://x.com/NirmalWires" target="_blank">
-                                    <img class="img-fluid" src="assets/images/svg/twitter.svg" alt="Twitter" />
+                                    <img class="img-fluid" src="assets/images/svg/twitter.svg" alt="Twitter" loading="lazy" />
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" width="75">
+                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" width="75" loading="lazy">
                 </div>
             </div>
         </div>
@@ -347,7 +347,7 @@ $otherJobsResult = mysqli_query($conn, $otherJobsQuery);
     <!-- WhatsApp Icon Start -->
     <section class="wp">
         <a href="https://wa.me/18003093876" target="_blank">
-            <img src="assets/images/svg/whatsapp.svg" alt="WhatsApp">
+            <img src="assets/images/svg/whatsapp.svg" alt="WhatsApp" loading="lazy">
         </a>
     </section>
     <!-- WhatsApp Icon End -->
