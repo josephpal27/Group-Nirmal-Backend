@@ -1,0 +1,85 @@
+/* Banner Start */
+.banner{
+    position: relative;
+    height: 87.7vh;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.banner-content{
+    position: absolute;
+    bottom: 4.2rem;
+    left: 8%;
+    color: #fff;
+}
+.banner-content h1{
+    font-size: calc(2.5rem + 1vw);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.banner-content p{
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 500;
+    max-width: 55%;
+    margin-top: 1rem;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .banner-content h1{
+        font-size: calc(2.8rem + 1vw);
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .banner-content h1{
+        font-size: calc(3rem + 1vw);
+    }
+}
+/* Banner End */
+
+/* Products Tabbing Start */
+.products-tabbing{
+    padding: 4rem 8%;
+    background-color: #d6d6d6;
+    background-image: url('../images/product-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.products-tab-head #nav-pills{
+    display: flex;
+    justify-content: center;
+}
+.products-tab-head button{
+    background-color: transparent !important;
+    color: #868686;
+}
+.products-tab-head button.active{
+    color: #1c455f !important;
+    position: relative;
+}
+.products-tab-head button.active::after{
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    width: 50%;
+    left: 25%;
+    height: 4px;
+    background-color: #1c455f;
+    border-radius: 2px;
+}
+.products-tab-head button:hover{
+    color: #6c6c6c;
+}
+.products-tab-head button h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(1rem + 0.5vw);
+}
+
+.products-tab-body{
+    margin-top: 3rem;
+}
+/* Products Tabbing End */
