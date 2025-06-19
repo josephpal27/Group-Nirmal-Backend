@@ -41,7 +41,7 @@ $total = mysqli_num_rows($careers);
     <nav>
         <div class="nav-left">
             <div class="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Nirmal" loading="lazy"></a>
+                <a href="/"><img src="assets/images/logo/logo.png" alt="Nirmal" loading="lazy"></a>
             </div>
             <div class="line"></div>
             <div class="group-logo">
@@ -64,7 +64,7 @@ $total = mysqli_num_rows($careers);
         </div>
         <!-- Menu List -->
         <div class="nav-menu">
-            <a href="index.html" class="menu">
+            <a href="/" class="menu">
                 <img src="assets/images/menu-icon/menu-icon-01.png" alt="icon" loading="lazy">
                 <span>Home</span>
             </a>
@@ -225,7 +225,7 @@ $total = mysqli_num_rows($careers);
                             </li>
                         </ul>
                     </div>
-                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" width="75" loading="lazy">
+                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" alt="50 years logo" width="75" loading="lazy">
                 </div>
             </div>
         </div>

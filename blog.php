@@ -66,7 +66,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <nav>
         <div class="nav-left">
             <div class="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Nirmal"></a>
+                <a href="/"><img src="assets/images/logo/logo.png" alt="Nirmal"></a>
             </div>
             <div class="line"></div>
             <div class="group-logo">
@@ -88,7 +88,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         </div>
         <!-- Menu List -->
         <div class="nav-menu">
-            <a href="index.html" class="menu">
+            <a href="/" class="menu">
                 <img src="assets/images/menu-icon/menu-icon-01.png" alt="icon">
                 <span>Home</span>
             </a>
@@ -244,7 +244,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                             </li>
                         </ul>
                     </div>
-                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" width="75">
+                    <img class="img-fluid ms-auto" src="assets/images/50-years-2.png" alt="50 years logo" width="75">
                 </div>
             </div>
         </div>
