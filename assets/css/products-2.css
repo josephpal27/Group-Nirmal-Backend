@@ -15,7 +15,7 @@
     color: #fff;
 }
 .banner-content h1{
-    font-size: calc(2.5rem + 1vw);
+    font-size: calc(3.5rem + 1vw);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -29,13 +29,13 @@
 /* For 110% in 15 inch screens */
 @media screen and (min-width: 1230px) and (max-width: 1399px){
     .banner-content h1{
-        font-size: calc(2.8rem + 1vw);
+        font-size: calc(3.8rem + 1vw);
     }
 }
 /* For 100% in 15 inch screens */
 @media screen and (min-width: 1400px) {
     .banner-content h1{
-        font-size: calc(3rem + 1vw);
+        font-size: calc(4rem + 1vw);
     }
 }
 /* Banner End */
@@ -80,6 +80,111 @@
 }
 
 .products-tab-body{
-    margin-top: 3rem;
+    margin-top: 4rem;
+}
+.products-tab-body .product-card-row{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.55%;
+}
+.products-tab-body .product-card{
+    width: 32.3%;
+    text-decoration: none;
+    background-color: #d6d6d6;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 5px 6px 6px;
+    margin-bottom: 3rem;
+}
+.products-tab-body .product-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.386) 5px 6px 6px;
+}
+.products-tab-body .product-card img{
+    width: 100%;
+    height: auto;
+}
+.products-tab-body .product-card .card-desc{
+    padding: 0.8rem;
+}
+.products-tab-body .product-card .card-desc h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(0.8rem + 0.5vw);
+    color: #1c455f;
+}
+.products-tab-body .product-card .card-desc p{
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 500;
+    line-height: normal;
+    color: #1c455f;
+    margin: 0;
+}
+.products-tab-body .product-card .card-desc button{
+    font-size: calc(0.38rem + 0.5vw);
+    font-weight: 600;
+    background-color: #1c455f;
+    color: #fff;
+    margin-top: 0.8rem;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    transition: all 0.2s ease-in-out;
+}
+.products-tab-body .product-card .card-desc button:hover{
+    background-color: #103044;
+}
+
+/* For 110% in 15 inch screens */
+@media screen and (min-width: 1230px) and (max-width: 1399px){
+    .products-tabbing{
+        padding: 4.5rem 8%;
+    }
+    .products-tab-head button h2{
+        font-size: calc(1.2rem + 0.5vw);
+    }
+
+    .products-tab-body{
+        margin-top: 4.5rem;
+    }
+    .products-tab-body .product-card{
+        margin-bottom: 3.5rem;
+    }
+    .products-tab-body .product-card .card-desc h3{
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    .products-tab-body .product-card .card-desc p{
+        font-size: calc(0.55rem + 0.5vw);
+    }
+    .products-tab-body .product-card .card-desc button{
+        font-size: calc(0.4rem + 0.5vw);
+        margin-top: 0.85rem;
+        padding: 0.3rem 1rem;
+    }
+}
+/* For 100% in 15 inch screens */
+@media screen and (min-width: 1400px) {
+    .products-tabbing{
+        padding: 5rem 8%;
+    }
+    .products-tab-head button h2{
+        font-size: calc(1.4rem + 0.5vw);
+    }
+
+    .products-tab-body{
+        margin-top: 5rem;
+    }
+    .products-tab-body .product-card{
+        margin-bottom: 3.8rem;
+    }
+    .products-tab-body .product-card .card-desc h3{
+        font-size: calc(1rem + 0.5vw);
+    }
+    .products-tab-body .product-card .card-desc p{
+        font-size: calc(0.6rem + 0.5vw);
+    }
+    .products-tab-body .product-card .card-desc button{
+        font-size: calc(0.45rem + 0.5vw);
+        margin-top: 0.9rem;
+        padding: 0.3rem 1rem;
+    }
 }
 /* Products Tabbing End */
