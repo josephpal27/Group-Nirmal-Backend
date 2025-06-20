@@ -5,6 +5,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 .banner h1{
     position: absolute;
