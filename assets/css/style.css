@@ -27,6 +27,7 @@ nav{
 }
 .nav-left .logo img{
     width: 80px;
+    height: auto;
 }
 .nav-left .line{
    width: 1.5px;
@@ -35,6 +36,7 @@ nav{
 }
 .nav-left .group-logo img{
     width: 80px;
+    height: auto;
 }
 .nav-left button{
     display: flex;
@@ -48,6 +50,7 @@ nav{
 }
 .nav-left button img{
     width: 30px;
+    height: auto;
     margin-right: 5px;
 }
 .nav-right{
@@ -66,6 +69,7 @@ nav{
 }
 .nav-right .social-icons img{
     width: 22px;
+    height: auto;
 }
 .nav-right button{
     position: absolute;
@@ -865,6 +869,7 @@ footer .social ul li:not(:last-child) {
 }
 .wp img{
     width: 40px;
+    height: auto;
     transition: all 0.2s ease-in-out;
     border-radius: 50%;
 }
