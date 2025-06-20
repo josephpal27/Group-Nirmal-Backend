@@ -4,6 +4,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 /* Banner End */
 
@@ -39,6 +40,7 @@
 }
 .doc-box img{
     width: 42%;
+    height: auto;
 }
 .doc-box h2{
     margin-top: 1.8rem;
