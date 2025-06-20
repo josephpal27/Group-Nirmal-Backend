@@ -7,15 +7,6 @@ RewriteEngine on
   Header always set X-Content-Type-Options "nosniff"
 </IfModule>
 
-# Force pvc-barbed-wire.html redirect
-# Redirect 301 /pvc-barbed-wire https://groupnirmal.com/pvc-barbed-wire.html
-
-# Force blog pages redirect to index 
-# Redirect 301 /blog-1.html https://groupnirmal.com/
-# Redirect 301 /blog-2.html https://groupnirmal.com/
-# Redirect 301 /blog-3.html https://groupnirmal.com/
-# Redirect 301 /blog-4.html https://groupnirmal.com/
-
 # Redirect direct access to /assets to custom 404 page
 RewriteCond %{REQUEST_URI} ^/assets/?$
 RewriteRule ^ /404.html [R=302,L]

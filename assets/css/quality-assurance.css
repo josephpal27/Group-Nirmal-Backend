@@ -5,6 +5,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 .banner h1{
     position: absolute;
@@ -47,6 +48,7 @@
   }
   .approval-icons-row .approval-icon img{
     width: 80%;
+    height: auto;
   }
 /* Approvals End */
 
@@ -163,6 +165,7 @@
 }
 .assurance-card img{
     width: 100%;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .assurance-card h3{
@@ -210,6 +213,7 @@
 }
 .accomplish-img img{
     width: 100%;
+    height: auto;
     border-right: 0.7rem solid #d1d1d1;
 }
 .accomplish-text{
