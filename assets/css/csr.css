@@ -5,6 +5,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 .banner .banner-logo{
     position: absolute;
@@ -13,6 +14,7 @@
 }
 .banner .banner-logo img{
     width: 180px;
+    height: auto;
 }
 .banner .banner-text{
     position: absolute;
@@ -181,6 +183,7 @@
 }
 .csr-tab-body .csr-card img{
     width: 100%;
+    height: auto;
 }
 .csr-tab-body .csr-card .arrow-box{
     position: absolute;
@@ -195,6 +198,7 @@
 }
 .csr-tab-body .csr-card .arrow-box img{
     width: 16px;
+    height: auto;
 }
 .csr-tab-body .csr-card:hover .arrow-box{
     display: flex;
@@ -340,6 +344,7 @@
 }
 #tabModal .modal-body .modal-image-slider img{
     width: 100%;
+    height: auto;
     margin-top: 6px;
 }
 #tabModal .modal-body .modal-text-content{
