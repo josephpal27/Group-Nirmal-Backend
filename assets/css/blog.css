@@ -4,6 +4,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 .banner-layer{
     width: 100%;
@@ -63,6 +64,7 @@
 }
 .blog-card img{
     width: 100%;
+    height: auto;
 }
 .blog-card h2{
     font-size: calc(1.1rem + 0.5vw);
