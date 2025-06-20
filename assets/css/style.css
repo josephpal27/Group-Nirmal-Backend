@@ -282,6 +282,7 @@ nav{
 }
 .about-us .count-row .count-box img{
     width: 40px;
+    height: auto;
 }
 .about-us .count-row .count-box span{
     margin-top: 0.7rem;
@@ -344,6 +345,7 @@ nav{
 }
 .chairman-content .chairman-image img{
     width: 100%;
+    height: auto;
 }
 .chairman-content .chairman-desc{
     width: 59%;
@@ -449,6 +451,7 @@ nav{
 }
 .product-cards-row .product-card img{
     width: 100%;
+    height: auto;
 }
 .product-cards-row .product-card span{
     font-size: calc(0.6rem + 0.5vw);
@@ -542,6 +545,7 @@ nav{
 }
 .industry-card img{
     width: 100%;
+    height: auto;
 }
 .industry-card .layer{
     width: 100%;
@@ -635,6 +639,7 @@ nav{
 }
 .media-boxes img{
     width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.278) 0px 2px 8px 0px;
 }
