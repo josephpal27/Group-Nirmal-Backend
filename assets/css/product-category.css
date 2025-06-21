@@ -5,6 +5,7 @@
 }
 .banner img{
     width: 100%;
+    height: auto;
 }
 .banner .banner-content{
     position: absolute;
@@ -68,6 +69,7 @@
 }
 .category-card img{
     width: 100%;
+    height: auto;
 }
 .category-card h3{
     font-size: calc(0.6rem + 0.5vw);
