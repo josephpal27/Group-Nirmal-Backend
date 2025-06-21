@@ -54,6 +54,7 @@
 }
 .banner-logo img{
     width: 180px;
+    height: auto;
 }
 
 /* For 110% in 15 inch screens */
@@ -765,6 +766,7 @@
 }
 .vineyard-support-system .support-card-row .support-card img{
     width: 100%;
+    height: auto;
 }
 .vineyard-support-system .support-card-row .support-card .support-card-layer{
     width: 100%;
