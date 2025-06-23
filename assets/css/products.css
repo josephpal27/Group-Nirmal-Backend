@@ -24,6 +24,7 @@
 .products #ban-2,
 .products #ban-3 {
     margin-top: 1.5rem;
+    height: auto;
 }
 .products .nav-pills .nav-link {
     background-color: #d9d9d9;
@@ -58,6 +59,10 @@
     cursor: pointer;
     transition: all 0.2s ease;
     overflow: hidden;
+}
+.products .tab-content .card .card-img img{
+    width: 100%;
+    height: auto;
 }
 .products .tab-content .card .card-img:hover {
     scale: 1.1;
