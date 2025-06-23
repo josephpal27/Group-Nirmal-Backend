@@ -16,6 +16,7 @@
 .banner .banner-content h1{
     font-size: calc(2.7rem + 1vw);
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* For 110% in 15 inch screens */
