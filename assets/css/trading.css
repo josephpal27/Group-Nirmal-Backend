@@ -39,7 +39,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 10px;
     border-radius: 5px;
 }
-.products h1{
+.products h2{
     text-align: center;
     color: #1d5179;
     font-weight: 700;
@@ -69,7 +69,7 @@
     padding: 2rem 0 0 0;
     text-align: center;
 }
-.product-row .product-card .card-desc h2{
+.product-row .product-card .card-desc span{
     color: #1d5179;
     font-weight: 700;
     font-size: calc(0.9rem + 0.5vw);
@@ -78,6 +78,7 @@
     color: #000;
     font-weight: 500;
     font-size: calc(0.45rem + 0.5vw);
+    margin-top: 0.7rem;
 }
 .product-row .product-card .card-desc button{
     margin-top: 0.8rem;
@@ -116,7 +117,7 @@
     .product-row .product-card .card-desc{
         padding: 2.5rem 1rem 0.5rem 1rem;
     }
-    .product-row .product-card .card-desc h2{
+    .product-row .product-card .card-desc span{
         font-size: calc(1rem + 0.5vw);
     }
     .product-row .product-card .card-desc p{
@@ -130,7 +131,7 @@
 .why-choose-us{
     margin: 0 8%;
 }
-.why-choose-us h1{
+.why-choose-us h3{
     text-align: center;
     color: #1d5179;
     font-weight: 700;
@@ -158,7 +159,7 @@
     width: 33%;
     height: auto;
 }
-.choose-us-card h2{
+.choose-us-card span{
     color: #1d5179;
     font-weight: 700;
     font-size: calc(0.8rem + 0.5vw);
@@ -187,7 +188,7 @@
     .why-choose-us-row{
         margin-top: 2.2rem;
     }
-    .choose-us-card h2{
+    .choose-us-card span{
         font-size: calc(0.95rem + 0.5vw);
         margin-top: 1.2rem;
     }
@@ -211,7 +212,7 @@
     justify-content: center;
     overflow: hidden;
 }
-.partner h1{
+.partner h4{
     text-align: center;
     color: #1d5179;
     font-weight: 700;
