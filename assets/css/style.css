@@ -830,10 +830,12 @@ footer{
 footer ul li{
     margin-bottom: 0.5rem;
 }
-footer h5 {
+footer span {
     font-weight: 700;
-    margin-bottom: 1rem;
     font-size: 13px;
+}
+footer .list-unstyled {
+    margin-top: 0.8rem;
 }
 footer a {
     color: #fff;
@@ -851,8 +853,14 @@ footer .social ul li:not(:last-child) {
 
 /* For 100% in 15 inch screens */
 @media screen and (min-width: 1400px) {
-    footer h5 {
+    footer span {
         font-size: 1rem;
+    }
+    footer .list-unstyled {
+        margin-top: 0.85rem;
+    }
+    footer #blank-head {
+        margin-bottom: 2.3rem !important;
     }
     footer a {
         font-size: 0.85rem;
