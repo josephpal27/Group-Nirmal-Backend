@@ -134,3 +134,21 @@ phoneInput.addEventListener('input', function () {
 phoneInput.placeholder = "";
 
 // ----------------------------------------------------------------------------------------------------
+
+// Functionality For Product & Internal Product Pages Read More Section
+function toggleReadMore() {
+  let extra = document.getElementById("extraContent");
+  let btn = document.getElementById("readMoreBtn");
+
+  let isHidden = !extra.classList.contains("show");
+
+  if (isHidden) {
+    extra.classList.add("show");
+    btn.textContent = "READ LESS";
+  } else {
+    extra.classList.remove("show");
+    btn.textContent = "READ MORE";
+  }
+}
+
+// ----------------------------------------------------------------------------------------------------
