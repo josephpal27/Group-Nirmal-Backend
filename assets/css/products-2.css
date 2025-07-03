@@ -43,7 +43,7 @@
 /* Products Tabbing Start */
 .products-tabbing{
     padding: 4rem 8%;
-    background-color: #d6d6d6;
+    background-color: rgba(214, 214, 214, 0.5);
     background-image: url('../images/product-bg.png');
     background-size: cover;
     background-position: center;
@@ -95,6 +95,9 @@
     transition: all 0.2s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 5px 6px 6px;
     margin-bottom: 3rem;
+}
+.products-tab-body #products-by-type .product-card{
+    width: 23.8%;
 }
 .products-tab-body .product-card:hover{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.386) 5px 6px 6px;
