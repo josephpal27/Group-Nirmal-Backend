@@ -136,34 +136,6 @@
     border-bottom: 3px solid #366d96;
 }
 
-/* .csr-tab-body .csr-tab-content-head{
-    border: 1.5px solid #000;
-    padding: 1.5rem 3rem;
-    border-radius: 10px;
-    margin-top: 2rem;
-    position: relative;
-}
-.csr-tab-body .csr-tab-content-head p{
-    margin: 0;
-    font-size: calc(0.55rem + 0.5vw);
-}
-.csr-tab-body .csr-tab-content-head .colon{
-    background-color: #fff;
-    padding: 0.8rem;
-    position: absolute;
-}
-.csr-tab-body .csr-tab-content-head img{
-    width: 20px;
-}
-.csr-tab-body .csr-tab-content-head #colon-1{
-    top: -20px;
-    left: -20px;
-}
-.csr-tab-body .csr-tab-content-head #colon-2{
-    bottom: -18px;
-    right: -20px;
-} */
-
 .csr-tab-body .csr-card-row{
     margin-top: 1.7rem;
     display: flex;
@@ -230,29 +202,6 @@
         border-bottom: 3.5px solid #366d96;
     }
 
-    /* .csr-tab-body .csr-tab-content-head{
-        border: 1.7px solid #000;
-        padding: 1.5rem 3.5rem;
-        margin-top: 2.3rem;
-    }
-    .csr-tab-body .csr-tab-content-head p{
-        font-size: calc(0.6rem + 0.5vw);
-    }
-    .csr-tab-body .csr-tab-content-head .colon{
-        padding: 1rem;
-    }
-    .csr-tab-body .csr-tab-content-head img{
-        width: 24px;
-    }
-    .csr-tab-body .csr-tab-content-head #colon-1{
-        top: -20px;
-        left: -28px;
-    }
-    .csr-tab-body .csr-tab-content-head #colon-2{
-        bottom: -18px;
-        right: -28px;
-    } */
-
     .csr-tab-body .csr-card-row{
         margin-top: 1.9rem;
     }
@@ -283,29 +232,6 @@
     .csr-tabs .csr-tab-head button.active{
         border-bottom: 3.9px solid #366d96;
     }
-
-    /* .csr-tab-body .csr-tab-content-head{
-        border: 1.8px solid #000;
-        padding: 1.8rem 3.5rem;
-        margin-top: 2.5rem;
-    }
-    .csr-tab-body .csr-tab-content-head p{
-        font-size: calc(0.68rem + 0.5vw);
-    }
-    .csr-tab-body .csr-tab-content-head .colon{
-        padding: 1.2rem;
-    }
-    .csr-tab-body .csr-tab-content-head img{
-        width: 26px;
-    }
-    .csr-tab-body .csr-tab-content-head #colon-1{
-        top: -22px;
-        left: -32px;
-    }
-    .csr-tab-body .csr-tab-content-head #colon-2{
-        bottom: -20px;
-        right: -32px;
-    } */
 
     .csr-tab-body .csr-card-row{
         margin-top: 2.2rem;
