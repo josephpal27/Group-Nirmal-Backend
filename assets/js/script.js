@@ -15,6 +15,7 @@ document.addEventListener('click', (event) => {
 
 // ----------------------------------------------------------------------------------------------------
 
+// Functionality For Product Internal Pages
 let productCards = document.querySelectorAll('.product-cards-row .product-card');
 
 productCards.forEach((productCard) => {
