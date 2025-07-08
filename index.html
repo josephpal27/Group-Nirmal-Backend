@@ -112,12 +112,12 @@
     <!-- Banner End -->
 
     <!-- Banner Pop-up Start -->
-    <!-- <section class="banner-pop-up" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="2000">
+    <section class="banner-pop-up hide">
         <i class="fa-solid fa-xmark"></i>
         <div class="img-box">
-            <img src="assets/images/emailer-2.jpg" alt="image">
+            <img src="assets/images/emailer.jpg" alt="image">
         </div>
-    </section>  -->
+    </section> 
     <!-- Banner Pop-up End -->
 
     <!-- About Start -->
@@ -637,12 +637,24 @@
 
     <script>
         // Functionality For Home Banner Pop Up
-        // let popUpBox = document.querySelector('.banner-pop-up');
-        // let popUpCloseBtn = document.querySelector('.banner-pop-up i');
+        let popUpBox = document.querySelector('.banner-pop-up');
+        let popUpCloseBtn = document.querySelector('.banner-pop-up i');
+        let lastScrollTop = window.scrollY;
+        let popupShown = false;
 
-        // popUpCloseBtn.addEventListener('click', () => {
-        //     popUpBox.classList.add('hide');
-        // })
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.scrollY;
+            // Show popup if user scrolls down and has scrolled more than 100px
+            if (currentScroll > lastScrollTop && currentScroll > 800 && !popupShown) {
+                popUpBox.classList.remove('hide');
+                popupShown = true; // Only show once per page load
+            }
+            lastScrollTop = currentScroll;
+        });
+
+        popUpCloseBtn.addEventListener('click', () => {
+            popUpBox.classList.add('hide');
+        });
     </script>
 
     <!-- JS Link -->

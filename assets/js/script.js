@@ -123,8 +123,7 @@ const iti = window.intlTelInput(phoneInput, {
 
 document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    const fullNumber = iti.getNumber();
-    alert("Submitted phone: " + fullNumber);
+    alert("Form Submitted Successfully");
 });
 
 phoneInput.addEventListener('input', function () {
@@ -151,5 +150,35 @@ function toggleReadMore() {
     btn.textContent = "READ MORE";
   }
 }
+
+// ----------------------------------------------------------------------------------------------------
+
+// Functionality Product Internal Pages Contact Form
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Stop default submission
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const responseBox = document.getElementById("formResponse");
+
+  fetch("submit-contact.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status === "success") {
+        responseBox.style.color = "green";
+        form.reset(); // clear form
+      } else {
+        responseBox.style.color = "red";
+      }
+      responseBox.innerText = data.message;
+    })
+    .catch(() => {
+      responseBox.style.color = "red";
+      responseBox.innerText = "Something went wrong.";
+    });
+});
 
 // ----------------------------------------------------------------------------------------------------

@@ -121,23 +121,23 @@
             <div class="contact-form">
                 <span>CONTACT US</span>
                 <form action="submit-contact.php" method="POST">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
-                        <label for="name">Name*</label>
+                    <div class="mb-3">
+                        <label for="name" style="font-weight: 500;">Full Name </label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name" required>
                     </div>
-                    <div class="form-floating">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                        <label for="email">Email*</label>
+                    <div class="mb-3">
+                        <label for="email" style="font-weight: 500;">Email </label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                     </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" name="subject" id="sub" placeholder="Subject">
-                        <label for="sub">Subject</label>
+                    <div class="mb-3">
+                        <label for="company_name" style="font-weight: 500;">Company Name</label>
+                        <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Enter Company Name">
                     </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" name="message" id="msg" placeholder="Message"></textarea>
-                        <label for="msg">Message</label>
+                    <div class="mb-3">
+                        <label for="phone_number" style="font-weight: 500;">Phone Number (with Country Code) </label>
+                        <input type="tel" class="form-control" name="phone_number" id="phone_number" placeholder="+91XXXXXXXXXX" required>
                     </div>
-                    <button type="submit">REQUEST</button>
+                    <button type="submit">Submit</button>
                     <div id="formResponse" style="margin-top: 1rem; font-weight: bold;"></div>
                 </form>
             </div>
@@ -347,6 +347,7 @@
 
     <!-- JS Link -->
     <script src="assets/js/script.js"></script>
+
     <script>
         document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault(); // Stop default submission

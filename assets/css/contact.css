@@ -71,6 +71,8 @@
     font-size: calc(0.46rem + 0.5vw);
     border-radius: 3px;
     box-shadow: none;
+    padding: 0.6rem 0.5rem;
+    margin-top: 0.3rem;
 }
 .contact-box-left .contact-form form label{
     font-size: calc(0.42rem + 0.5vw);

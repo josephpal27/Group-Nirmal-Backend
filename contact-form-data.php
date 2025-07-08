@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION['admin_id'])) {
   header("Location: login.html");
   exit();
@@ -6,8 +7,8 @@ if (!isset($_SESSION['admin_id'])) {
 
 include 'db.php';
 
-// Fetch contact form submissions
-$query = "SELECT name, email, subject, message FROM contact_form ORDER BY id DESC";
+// Fetch contact form submissions including created_at
+$query = "SELECT name, email, company_name, phone_number, created_at FROM contact_form ORDER BY id DESC";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -52,8 +53,9 @@ $result = mysqli_query($conn, $query);
             <tr>
               <th>NAME</th>
               <th>EMAIL</th>
-              <th>SUBJECT</th>
-              <th>MESSAGE</th>
+              <th>COMPANY NAME</th>
+              <th>PHONE NUMBER</th>
+              <th>SUBMITTED ON</th>
             </tr>
           </thead>
           <tbody>
@@ -62,13 +64,14 @@ $result = mysqli_query($conn, $query);
                 <tr>
                   <td><?= htmlspecialchars($row['name']) ?></td>
                   <td><?= htmlspecialchars($row['email']) ?></td>
-                  <td><?= htmlspecialchars($row['subject']) ?></td>
-                  <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
+                  <td><?= htmlspecialchars($row['company_name']) ?></td>
+                  <td><?= htmlspecialchars($row['phone_number']) ?></td>
+                  <td><?= date("d M Y", strtotime($row['created_at'])) ?></td>
                 </tr>
               <?php endwhile; ?>
             <?php else: ?>
               <tr>
-                <td colspan="4" class="text-center text-muted">No data available.</td>
+                <td colspan="5" class="text-center text-muted">No data available.</td>
               </tr>
             <?php endif; ?>
           </tbody>
