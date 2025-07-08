@@ -748,7 +748,7 @@
 .vineyard-support-system{
     padding: 0.6rem 8% 0.5rem 8%;
 }
-.vineyard-support-system h1{
+.vineyard-support-system h3{
     font-size: calc(1.9rem + 0.5vw);
     font-weight: 700;
     text-align: center;
@@ -788,12 +788,15 @@
     padding: 1.2rem 1.5rem;
     transition: all 0.3s ease-in-out;
 }
-.vineyard-support-system .support-card-row .support-card .support-card-layer h4{
+.vineyard-support-system .support-card-row .support-card .support-card-layer span{
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     font-size: calc(0.9rem + 0.5vw);
     color: #fff;
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: normal;
 }
 .vineyard-support-system .support-card-row .support-card .support-card-layer p{
     color: #fff;
